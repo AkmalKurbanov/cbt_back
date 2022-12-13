@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: ТОВАР
+        type: text
+    is_active:
+        label: АКТИВНО
+        type: text
+    created_at:
+        label: СОЗДАН
+        type: text

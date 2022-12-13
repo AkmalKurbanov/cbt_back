@@ -1,0 +1,37 @@
+[ToursComponent]
+==
+<div style="background-color: #fff; z-index:9; position: relative;">
+
+
+</div>
+<div class="block-tour">
+    <div class="swiper-container block-tour-slider">
+        <div class="swiper-wrapper">
+
+
+
+
+            {% for item in tours %}
+
+            
+            {% if item.is_recomend == 1 %}
+            <div class="swiper-slide">
+
+                
+                <a class="block-tour__item" href="/tours/t/{{item.category.slug}}/{{item.slug}}">
+                    <div class="block-tour__img">
+                        <img src="{{item.preview.path | resize(300, 150, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                            alt="">
+                    </div>
+                    <div class="block-tour__item-desc">
+                        <div class="block-tour__name">{{ item.title }} {{item.categories}}</div>
+                        <div class="block-tour__desc">{{ item.duration }}</div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% else %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

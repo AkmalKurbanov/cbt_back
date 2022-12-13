@@ -1,0 +1,39 @@
+url = "/search-result"
+layout = "default"
+title = "Результаты поиска"
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+
+
+[viewBag]
+localeUrl[en] = "/search-result"
+localeTitle[en] = "Search Results"
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+            <li>{{this.page.title}} </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="title-wrap">
+        <h2 class="title">{{this.page.title}}</h2>
+    </div>
+    {% set results = searchResults.results %}
+
+    {% for result in results %}
+    {# Display all results #}
+    {% partial searchResults ~ '::searchresult.htm' result = result %}
+    {% else %}
+    {# No results found #}
+    {% partial searchResults ~ '::no-results.htm' %}
+    {% endfor %}
+
+    {% partial searchResults ~ '::pagination.htm' results = results %}
+
+
+</div>

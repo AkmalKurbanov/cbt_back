@@ -1,0 +1,71 @@
+description = "Шаблон по умолчанию"
+
+[fontAwesomeCssLink]
+
+[sitePicker]
+
+[staticPage]
+useContent = 1
+default = 0
+
+[contenteditor]
+
+[genericForm]
+group = "Тур детально"
+rules[email] = "required|email"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "CBT Тур детально"
+mail_recipients[250296a@gmail.com] = "CBT"
+mail_resp_field = "250296a@gmail.com"
+mail_resp_from = "250296a@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[seo]
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% partial 'GA4-head' %}
+    {% partial 'site/meta' %}
+   {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+    
+    {% partial 'GA4-body' %}
+
+    <div class="wrapper">
+        <div class="content">
+            {% if this.page.url == '/' %}
+            {% partial 'site/hero' %}
+
+            {% else %}
+            <!-- Header -->
+            {% partial 'site/header' %}
+
+            {% endif %}
+
+
+            <!-- Content -->
+            <section id="layout-content">
+                {% page %}
+								
+            </section>
+        </div>
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+    </div>
+
+</body>
+
+</html>

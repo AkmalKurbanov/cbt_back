@@ -1,0 +1,41 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table cbt_media_photo'
+    - builder_table_create_cbt_media_photo.php
+1.0.3:
+    - 'Updated table cbt_media_photo'
+    - builder_table_update_cbt_media_photo.php
+1.0.4:
+    - 'Created table cbt_media_video'
+    - builder_table_create_cbt_media_video.php
+1.0.5:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video.php
+1.0.6:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_2.php
+1.0.7:
+    - 'Updated table cbt_media_photo'
+    - builder_table_update_cbt_media_photo_2.php
+1.0.8:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_3.php
+1.0.9:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_4.php
+1.0.10:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_5.php
+1.0.11:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_6.php
+1.0.12:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_7.php
+1.0.13:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_8.php
+1.0.14:
+    - 'Updated table cbt_media_video'
+    - builder_table_update_cbt_media_video_9.php

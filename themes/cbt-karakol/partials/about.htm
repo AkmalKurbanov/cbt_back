@@ -1,0 +1,29 @@
+<div class="img-group gr-bg">
+    <div class="container">
+        <div class="img-group__wrap">
+            <div class="img-group__col">
+                <div class="img-group__images">
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="about/text-section-img1.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="about/text-section-img2.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="about/text-section-img3.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+                </div>
+            </div>
+            <div class="img-group__col">
+                <div class="title-wrap">
+                    {% component 'contenteditor' file="about/text-section-title.htm" fixture="h2" class="title" tools="line-break" %}
+                    {% component 'contenteditor' file="about/text-section-subtitle.htm" fixture="h3" class="subtitle" tools="line-break" %}
+                </div>
+                <div class="img-group__desc">
+                    {% component 'contenteditor' file="about/text-section-text.htm" fixture="p" class="text-fz20" tools="line-break" %}
+                    {% component 'contenteditor' file="about/text-section-btn.htm" fixture="div"  tools="link" class="btn"  %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

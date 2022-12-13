@@ -1,0 +1,10 @@
+name: Rent
+form: $/cbt/rent/models/rent/fields.yaml
+modelClass: Cbt\Rent\Models\Rent
+defaultRedirect: cbt/rent/rent
+create:
+    redirect: 'cbt/rent/rent/update/:id'
+    redirectClose: cbt/rent/rent
+update:
+    redirect: cbt/rent/rent
+    redirectClose: cbt/rent/rent

@@ -1,0 +1,148 @@
+items:
+    -
+        title: Главная
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: home
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Main
+                    url: /
+    -
+        title: Туры
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: tours/index
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Tours
+                    url: /
+    -
+        title: Аренда
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: rent
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Rent
+                    url: /
+    -
+        title: Блог
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: blog/index
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Blog
+    -
+        title: Медиа
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Media
+        items:
+            -
+                title: Фото
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: photo
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    locale:
+                        en:
+                            title: Photo
+            -
+                title: Видео
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: video
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    locale:
+                        en:
+                            title: Video
+    -
+        title: Контакты
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: contacts
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Contacts
+    -
+        title: 'О нас'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: about
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: About
+name: 'Меню шапки'

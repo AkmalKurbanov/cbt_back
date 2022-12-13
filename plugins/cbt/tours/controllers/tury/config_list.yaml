@@ -1,0 +1,13 @@
+list: $/cbt/tours/models/tur/columns.yaml
+modelClass: Cbt\Tours\Models\Tur
+title: TURY
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'cbt/tours/tury/update/:id'
+filter: config_filter.yaml

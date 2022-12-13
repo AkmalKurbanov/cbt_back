@@ -1,0 +1,54 @@
+url = "/blog"
+layout = "default"
+title = "Блог"
+
+[viewBag]
+localeUrl[en] = "/blog"
+localeTitle[en] = "Blog"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "blog/post"
+
+[siteSearchInclude]
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li>{{this.page.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="articles">
+    <div class="container">
+        <div class="title-wrap">
+
+            <h2 class="title">{{this.page.title}}</h2>
+            {% for post in posts %}
+            <div class="articles__item">
+                <div class="articles__img">
+                    {% for img in post.featured_images|slice(0,1) %}
+                    <img src="{{img.path | resize(800, 400, { mode: 'crop', quality: '80', extension: 'webp'})}}"
+                        alt="">
+                    {% endfor %}
+                </div>
+                <div class="articles__desc-wrap">
+                    <div class="articles__title">{{post.title}}</div>
+                    <div class="article-date">
+                        <span><i class="icon-user"></i>{{post.user.first_name}} {{post.user.last_name}}</span>
+                        <span>{{post.published_at | date ('d M Y')}}</span>
+                    </div>
+                    <div class="articles__desc">
+                        {{post.excerpt}}
+                    </div><a class="btn" href="{{post.url}}">Подробнее </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+plugin:
+    name: 'cbt.rent::lang.plugin.name'
+    description: 'Аренда товаров и прайс-лист'
+    author: cbt
+    icon: oc-icon-binoculars
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Аренда
+        url: /
+        icon: icon-adn
+        iconSvg: ''
+        sideMenu:
+            side-menu-item:
+                label: Товары
+                url: cbt/rent/rent
+                icon: icon-sitemap
+            catalog:
+                label: Прайс-лист
+                url: cbt/rent/pricelist
+                icon: icon-list-alt

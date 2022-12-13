@@ -1,0 +1,10 @@
+name: TURY
+form: $/cbt/tours/models/tur/fields.yaml
+modelClass: Cbt\Tours\Models\Tur
+defaultRedirect: cbt/tours/tury
+create:
+    redirect: 'cbt/tours/tury/update/:id'
+    redirectClose: cbt/tours/tury
+update:
+    redirect: cbt/tours/tury
+    redirectClose: cbt/tours/tury

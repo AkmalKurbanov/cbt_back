@@ -1,0 +1,10 @@
+name: Categories
+form: $/cbt/tours/models/category/fields.yaml
+modelClass: Cbt\Tours\Models\Category
+defaultRedirect: cbt/tours/categories
+create:
+    redirect: 'cbt/tours/categories/update/:id'
+    redirectClose: cbt/tours/categories
+update:
+    redirect: cbt/tours/categories
+    redirectClose: cbt/tours/categories

@@ -1,0 +1,17 @@
+{% set categories = __SELF__.categories %}
+{% set tours = __SELF__.tours %}
+{% set tour = __SELF__.tour %}
+
+
+
+
+
+
+{% if this.page.id == 'tours-category' %}
+{% partial __SELF__~"::page_category" %}
+{% elseif this.page.id == "tours-tour" %}
+{% partial __SELF__~"::page_tour" %}
+{% endif %}
+
+
+

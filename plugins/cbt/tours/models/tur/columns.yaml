@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: 'НАЗВАНИЕ ТУРА'
+        type: text
+    is_active:
+        label: АКТИВНЫЙ
+        type: text
+    is_popular:
+        label: ПОПУЛЯРНЫЙ
+        type: text

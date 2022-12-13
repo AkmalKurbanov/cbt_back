@@ -1,0 +1,85 @@
+url = "/photo/:page?"
+layout = "default"
+title = "Фото"
+
+[builderList]
+modelClass = "Cbt\Media\Models\Photo"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 9
+pageNumber = "{{ :page }}"
+
+[viewBag]
+localeUrl[en] = "/photo/:page?"
+localeTitle[en] = "Photo"
+
+[siteSearchInclude]
+==
+<div class="media" id="gallery">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">{{this.page.title}}</h2>
+        </div>
+        <div class="media__wrap">
+
+            {% set records = builderList.records %}
+            {% set displayColumn = builderList.displayColumn %}
+            {% set noRecordsMessage = builderList.noRecordsMessage %}
+            {% set detailsPage = builderList.detailsPage %}
+            {% set detailsKeyColumn = builderList.detailsKeyColumn %}
+            {% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+            {% for record in records %}
+
+            <a class="media__item" href="{{record.photo.path | resize(1300, auto, {mode: 'crop', quality: '80', extension: 'webp'})}}"
+                data-fancybox="gallery">
+                <div class="media__item-img">
+                    <img src="{{record.photo.path | resize(520, 270, {mode: 'crop', quality: '80', extension: 'webp'})}}" alt="">
+                    <div class="media__item-img-effect">
+                        <span></span>
+                    </div>
+                    <div class="media__item-info">
+                        <div class="media__item-name">{{record.title}}</div>
+                        <div class="media__item-desc">{{record.desc}}</div>
+                    </div>
+                    <div class="media__item-zoom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875V15.875Z"
+                                fill="#fff"></path>
+                            <clippath id="clip0_77_1126">
+                                <rect width="24" height="24"></rect>
+                            </clippath>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+
+        </div>
+        {% if records.lastPage > 1 %}
+        <ul class="pagination">
+            {% if records.currentPage > 1 %}
+            <li class="prev"><a
+                    href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr;
+                    </a></li>
+            {% endif %}
+
+            {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+
+            {% if records.lastPage > records.currentPage %}
+            <li class="next"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">
+                    &rarr;</a></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+</div>

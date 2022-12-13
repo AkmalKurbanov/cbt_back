@@ -1,0 +1,148 @@
+url = "/form-rent"
+layout = "default"
+title = "Аренда снаряжения"
+
+[genericForm]
+group = "Аренда снаряжения"
+rules[email] = "required|email"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "CBT Аренда снаряжения"
+mail_recipients[250296a@gmail.com] = "CBT"
+mail_resp_field = "250296a@gmail.com"
+mail_resp_from = "250296a@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[viewBag]
+localeUrl[en] = "/form-rent"
+localeTitle[en] = "Equipment rental"
+
+[siteSearchInclude]
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+            <li>{{'Аренда снаряжения'|_}}</li>
+        </ul>
+    </div>
+</div>
+<div class="booking-form">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">{{'Аренда снаряжения'|_}}</h2>
+        </div>
+        <div class="booking-form__wrap">
+            <div class="booking-form__col">
+                <p>{{'Здесь Вы можете забронировать наиболее подходящий для Вас дату для похода в тур'|_}}</p><br>
+                <p>{{'Для этого нам требуется инфо от отправителя'|_}}:</p>
+
+
+
+
+                <form data-request="{{ genericForm }}::onFormSubmit">
+
+                    {{ form_token() }}
+
+                    <br>
+
+                    <div class="input-wrap">
+                        <div class="input">
+                            <label for="name">{{'Ф.И.О гостя'|_}}</label>
+                            <input type="text" id="name" name="{{'Ф.И.О гостя'|_}}">
+
+                        </div>
+                        <div class="input">
+                            <label for="phone">{{'Номер телефона'|_}}</label>
+                            <input type="text" id="phone" name="Телефон">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">{{'Cообщения'|_}}?</label>
+                            <textarea id="message" name="Тема сообщения" style="width: 100%;min-height: 45px;border:none; outline: none; padding-left: 10px; padding-top: 10px;resize: vertical;"></textarea>
+                           
+                        </div>
+                        <div class="input">
+                            <label>{{'Дата'|_}}</label>
+                            <span class="date-wrapper">
+                                <input id="start-date" type="text" autocomplete="off" name="От">
+                            </span>
+                            /
+                            <span class="date-wrapper">
+                                <input id="end-date" type="text" autocomplete="off" name="До" disabled>
+                            </span>
+                        </div>
+                        <div id="{{ genericForm }}_forms_flash"></div>
+                    </div>
+
+
+                    <div class="booking-form__btn">
+                        <button id="simpleContactSubmitButton" type="submit" class="btn">{{'Отправить'|_}}</button>
+                        <p>{{'Наш специалист с <br> Вами свяжется'|_}}</p>
+                    </div>
+
+
+                </form>
+
+
+
+
+            </div>
+            <div class="booking-form__col">
+                <div class="list-contacts list-contacts--dark">
+                    <ul>
+                        <li>
+                            <span><i class="icon-user"></i></span>
+                            <div>
+                                <p>{{this.theme.contactPerson}}</p>
+                            </div>
+                        </li>
+                        <li><span><i class="icon-marker"></i></span>
+                            {% for item in this.theme.addressRepeater %}
+                            <div>
+                                {{item.address|raw}}
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span><i class="icon-envelope"></i></span>
+                            {% for item in this.theme.emailRepeater %}
+                            <div>
+                                <a href="tel:{{item.email}}">{{item.email}}</a>
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon-phone"></i>
+                            </span>
+                            {% for item in this.theme.phoneRepeater %}
+                            <div>
+                                <a href="tel:{{item.phone}}">{{item.phone}}
+                                    <span class="messenger">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            {%endfor%}
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+fields:
+    title:
+        label: ТОВАР
+        span: auto
+        type: text
+    icon:
+        label: 'ИКОНКА ТОВАРА'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    is_active:
+        label: 'СКРЫТЬ / ПОКАЗАТЬ'
+        span: auto
+        type: switch

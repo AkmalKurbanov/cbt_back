@@ -1,0 +1,52 @@
+<div class="booking-popup">
+    <div class="booking-popup__window">
+        <div class="booking-popup__window-close">&#x2715</div>
+        <h2>{{'БРОНИРОВАНИЕ'|_}} </h2>
+        <div class="booking-popup__total-info">
+            <div class="booking-popup__info-item">
+                <div class="booking-popup__total-item-title">Количество человек</div>
+                <div class="booking-popup__total-item-value person-count-js">10 человек</div>
+            </div>
+            <div class="booking-popup__info-item booking-popup__info-item--date">
+                <div class="booking-popup__date-wrap">
+                    <div class="booking-popup__total-item-title">{{'Дата с'|_}}</div>
+                    <div class="booking-popup__total-item-value date-from-js">07.12.22</div>
+                </div>
+                <div class="booking-popup__date-wrap">
+                    <div class="booking-popup__total-item-title">{{'по'|_}}</div>
+                    <div class="booking-popup__total-item-value date-to-js">10.12.22</div>
+                </div>
+            </div>
+        </div>
+
+
+        <form data-request="{{ genericForm }}::onFormSubmit">
+
+            {{ form_token() }}
+
+            <div id="{{ genericForm }}_forms_flash"></div>
+            <br>
+            <div class="input-wrap">
+                <input class="booking-popup__person-value" type="hidden" name="Количество человек" value="">
+                <input class="booking-popup__date-from-value" type="hidden" name="Дата с" value="">
+                <input class="booking-popup__date-to-value" type="hidden" name="Дата по" value="">
+                <div class="input">
+                    <label for="name">{{'Ф.И.О гостя'}}</label>
+                    <input id="name" type="text" name="Имя">
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email">
+                </div>
+                <div class="input">
+                    <label for="phone">{{'Номер телефона'|_}} </label>
+                    <input id="phone" type="text" name="Номер телефона">
+                </div>
+                <div class="booking-popup__btn-wrap">
+                    <div class="btn btn--red booking-popup__cancel">{{'Отмена'|_}} </div>
+                    <button id="simpleContactSubmitButton" type="submit" class="btn btn-default">{{'Забронировать'|_}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

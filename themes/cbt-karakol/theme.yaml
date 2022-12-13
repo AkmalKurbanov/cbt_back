@@ -1,0 +1,145 @@
+name: CBT Karakol
+description: 'CBT Karakol'
+code: 'CBT Karakol'
+
+form:
+  tabs:
+    fields:
+      name:
+        label: Имя сайта
+        type: text 
+        span: left
+        tab: Главная информация
+      logoHeaderMain:
+        label: Логотип в "шапке" сайта на "Главной" странице  
+        type: fileupload  
+        mode: image
+        span: left  
+        tab: Главная информация
+        comment: Желательно выставлять светлый (так его будет лучше видно) 
+      logoHeader:
+        label: Логотип в "шапке" сайта 
+        type: fileupload
+        mode: image
+        span: right  
+        tab: Главная информация
+        comment: Желательно выставлять темный (т.к. фон "шапки" белый) 
+     
+      logoFooter:
+        label: Логотип в "подвале" сайта 
+        type: fileupload
+        mode: image
+        span: right  
+        tab: Главная информация
+        comment: Желательно выставлять светлый (т.к. фон "подвала" черный) 
+      
+      mainTitle:
+        type: richeditor
+        label: Вводный заголовок
+        comment: Вводный заголовок на "Главной" странице. (Желательно краткий/лаконичный, чтобы не портилась общая картина и не нагружать посетителя сайта лишней информацией). 
+        placeholder: Лучше гор могут быть только горы
+        span: left
+        tab: Главная информация
+        translatable: true
+      subTitle:
+        type: richeditor
+        label: Подзаголовок
+        comment: Подзаголовок в блоке с бронированием
+        placeholder: Кыргызстан — это настоящая жемчужина Центральной Азии...
+        span: left
+        tab: Главная информация
+        translatable: true
+
+      heroSlider:
+        type: repeater
+        prompt: 'Добавить изображение'
+        span: full
+        form:
+          fields:
+              heroSlide:
+                  label: Слайд
+                  type: mediafinder
+                  mode: image
+        tab: Слайдер на Главной странице
+      
+      contactPerson:
+        type: text
+        label: Контактное лицо
+        placeholder: Имя, должность
+        translatable: true
+        tab: Контакты
+
+
+      emailRepeater:
+        type: repeater
+        comment: Электронный адрес будет меняться везде (на всем сайте) где есть упоминание о почте.
+        span: left
+        tab: Контакты
+        label: Email
+        form:
+          fields:
+            email:
+              type: text
+              label: Электронный адрес
+              placeholder: cbtkarakol@gmail.com
+      phoneRepeater:
+        type: repeater
+        comment: Номер телефона будет меняться везде (на всем сайте).
+        span: right
+        tab: Контакты
+        label: Телефон
+        form:
+          fields:
+            phone:
+              type: text
+              label: Номер телефона
+              placeholder: +996 999 999 999
+              span: left
+            
+            awesome_icon:
+              label: Мессенджер ( Иконка )
+              span: right
+              type: awesomeiconslist
+              unicodeValue: false
+              emptyOption: false
+              iconTypes: brands
+              placeholder: Выбрать иконку
+
+      social:
+        type: repeater
+        label: Cоциальные сети
+        titleFrom: name  
+        tab: Контакты
+        span: full
+        form:
+          fields:
+            awesome_icon:
+              label: Социальная сеть ( Иконка )
+              span: left
+              type: awesomeiconslist
+              unicodeValue: false
+              emptyOption: false
+              iconTypes: brands
+              placeholder: Выбрать иконку
+            url:
+              label: Ссылка социальной сети
+              span: right
+              type: text
+              placeholder: https://www.instagram.com/  
+
+      addressRepeater:
+        type: repeater
+        label: Адрес главного офиса (или филиалов)
+        tab: Контакты
+        span: full
+        form:
+          fields:
+            address:
+              type: richeditor
+              size: small
+              label: Адрес главного офиса (или филиалов)
+              placeholder: Кыргызстан, Иссык-Кульская обл., г. Каракол, ул. Абдрахманова, 123, кв. 20 
+      map:
+        label: Карта (ссылка карты)                
+        placeholder: https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed
+        tab: Контакты

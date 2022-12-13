@@ -1,0 +1,45 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "blog/post"
+==
+<div class="events">
+    <div class="container">
+        <div class="title-wrap title-wrap--indent">
+            <h2 class="title">{{'БЛОГ'|_}}</h2>
+        </div>
+        <div class="swiper-container events-slider">
+            <div class="swiper-wrapper">
+                {% for post in posts %}
+                <div class="swiper-slide">
+                    <div class="block-tour__item block-tour__item--modify">
+                        <div class="block-tour__img">
+                            {% for img in post.featured_images|slice(0,1) %}
+                            <img src="{{img.path | resize(800, 400, { mode: 'crop', quality: '80', extension: 'webp'})}}"
+                                alt="">
+                            {% endfor %}
+                        </div>
+                        <div class="block-tour__item-desc">
+                            <div>
+                                <div class="block-tour__name">{{post.title}}</div>
+                                <div class="block-tour__desc">
+                                    {{post.excerpt}}
+                                </div>
+                            </div>
+                            <div class="block-tour__item-desc-bottom">
+                                <a class="more" href="{{post.url}}">ПОДРОБНЕЕ</a>
+                                <span>
+                                    {{post.published_at | date ('d M Y')}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

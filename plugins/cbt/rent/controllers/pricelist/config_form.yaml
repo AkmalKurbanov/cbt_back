@@ -1,0 +1,10 @@
+name: PriceList
+form: $/cbt/rent/models/pricelist/fields.yaml
+modelClass: Cbt\Rent\Models\PriceList
+defaultRedirect: cbt/rent/pricelist
+create:
+    redirect: 'cbt/rent/pricelist/update/:id'
+    redirectClose: cbt/rent/pricelist
+update:
+    redirect: cbt/rent/pricelist
+    redirectClose: cbt/rent/pricelist

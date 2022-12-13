@@ -1,0 +1,32 @@
+[ToursComponent]
+==
+<div class="popular">
+     <div class="container">
+         <div class="title-wrap title-wrap--indent">
+             <h2 class="title">ПОПУЛЯРНЫЕ МЕСТА</h2>
+         </div>
+         <div class="popular__wrap">
+             {% for item in tours %}
+
+
+             {% if item.is_popular == 1 %}
+             <a class="popular__item" href="/tours/t/{{item.category.slug}}/{{item.slug}}"><img
+                     src="{{item.preview.path | resize(510, 300, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                     alt="">
+                 <div class="popular__desc">
+                     <div class="popular__name">{{item.title}}, высота {{item.height}}</div>
+                     <div class="popular__place">{{item.place}}</div>
+                 </div>
+             </a>
+             {% endif %}
+             {% else %}
+             {% endfor %}
+
+
+
+            
+
+
+         </div>
+     </div>
+ </div>

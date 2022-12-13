@@ -1,0 +1,12 @@
+list: $/cbt/rent/models/pricelist/columns.yaml
+modelClass: Cbt\Rent\Models\PriceList
+title: PriceList
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'cbt/rent/pricelist/update/:id'

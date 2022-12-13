@@ -1,0 +1,136 @@
+url = "/contacts"
+layout = "default"
+title = "Контакты"
+
+[viewBag]
+localeUrl[en] = "/contacts"
+localeTitle[en] = "Contacts"
+
+[genericForm]
+group = "Страница \"Контакты\""
+rules[email] = "required|email"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "CBT Страница \"Контакты\""
+mail_recipients[250296a@gmail.com] = "CBT"
+mail_resp_field = "250296a@gmail.com"
+mail_resp_from = "250296a@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[siteSearchInclude]
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+            <li>{{this.page.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="contacts">
+    <div class="container">
+        <div class="contacts__wrap">
+            <div class="contacts__col">
+                <div id="map">
+                <iframe src="{{this.theme.map}}"></iframe>
+                </div>
+                <br>
+                <br>
+
+                <form data-request="{{ genericForm }}::onFormSubmit">
+
+                    {{ form_token() }}
+
+
+                    <div class="input-wrap">
+                        <div class="input">
+                            <label for="name">{{'Имя'|_}}</label>
+                            <input type="text" id="name" name="Имя">
+                        </div>
+                        <div class="input">
+                            <label for="phone">{{'Номер телефона'|_}}</label>
+                            <input type="text" id="phone" name="Телефон">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">{{'Сообщение'|_}}</label>
+                            <textarea name="Сообщение" id="messgase"
+                                style="width: 100%;min-height: 45px;border:none; outline: none; padding-left: 10px; padding-top: 10px;resize: vertical;"></textarea>
+                        </div>
+                    </div>
+                    <div id="{{ genericForm }}_forms_flash"></div>
+
+                    <div class="booking-form__btn">
+                        <button id="simpleContactSubmitButton" type="submit" class="btn">{{'Отправить'|_}}</button>
+                        <p>{{'Оставте заявку и <br> наш специалист <br> свяжется с Вами'|_}}</p>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="contacts__col">
+                <div class="title-wrap">
+                    <h2 class="title">{{this.page.title}}</h2>
+                </div>
+                <div class="list-contacts list-contacts--dark">
+                    <ul>
+                        <li>
+                            <span><i class="icon-user"></i></span>
+                            <div>
+                                <p>{{this.theme.contactPerson}}</p>
+                            </div>
+                        </li>
+                        <li><span><i class="icon-marker"></i></span>
+                            {% for item in this.theme.addressRepeater %}
+                            <div>
+                                {{item.address|raw}}
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span><i class="icon-envelope"></i></span>
+                            {% for item in this.theme.emailRepeater %}
+                            <div>
+                                <a href="tel:{{item.email}}">{{item.email}}</a>
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon-phone"></i>
+                            </span>
+                            {% for item in this.theme.phoneRepeater %}
+                            <div>
+                                <a href="tel:{{item.phone}}">{{item.phone}}
+                                    <span class="messenger">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            {%endfor%}
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

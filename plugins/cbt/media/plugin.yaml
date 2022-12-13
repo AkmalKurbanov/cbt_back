@@ -1,0 +1,20 @@
+plugin:
+    name: 'cbt.media::lang.plugin.name'
+    description: 'Фото и Видео'
+    author: Cbt
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    Media:
+        label: Медиа
+        url: /
+        icon: icon-video-camera
+        sideMenu:
+            Photo:
+                label: ФОТО
+                url: cbt/media/photo
+                icon: icon-image
+            VIDEO:
+                label: ВИДЕО
+                url: cbt/media/video
+                icon: icon-file-video-o

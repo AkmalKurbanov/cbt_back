@@ -1,0 +1,35 @@
+url = "/404"
+title = "/404"
+
+[viewBag]
+localeUrl[en] = "/404"
+localeTitle[en] = "/404"
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="not-found">
+                <img class="not-found__lg" src={{ "/assets/images/404.webp" | theme }} alt="">
+                <img class="not-found__sm" src={{ "/assets/images/404-768.webp" | theme }} alt="">
+                <img class="not-found__xs" src={{ "/assets/images/404-575.webp" | theme }} alt="">
+                <div class="not-found__bottom">
+                    <p>{{'Страница не найдена'|_}}</p>
+                    <div class="not-found__btn-wrap"><a class="btn btn--dark"
+                            href="{{ 'home'|page }}">{{'На главную'|_}} </a><a
+                            class="btn btn--dark" href="{{'tours/index'|page}}">{{'Страница туров'|_}}</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

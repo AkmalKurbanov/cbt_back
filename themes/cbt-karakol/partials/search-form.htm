@@ -1,0 +1,21 @@
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "search-result.htm"
+==
+<div class="search-form">
+<form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
+    <div class="ss-search-form">
+        <div class="ss-search-form__input search-form__input">
+            <input name="q" type="text" placeholder="{{'Что Вы ищите'}}?"
+                   value="{{ searchInput.query }}"
+                   autocomplete="off"
+                   
+            >
+            <button class="ss-search-form__submit" type="submit">{{'Поиск'|_}}</button>
+        </div>
+        <div class="ss-search-form__results" id="autocomplete-results"></div> 
+    </div>
+</form>
+</div>

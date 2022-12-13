@@ -1,0 +1,10 @@
+name: Photo
+form: $/cbt/media/models/photo/fields.yaml
+modelClass: Cbt\Media\Models\Photo
+defaultRedirect: cbt/media/photo
+create:
+    redirect: 'cbt/media/photo/update/:id'
+    redirectClose: cbt/media/photo
+update:
+    redirect: cbt/media/photo
+    redirectClose: cbt/media/photo

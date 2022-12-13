@@ -1,0 +1,115 @@
+fields:
+    title:
+        label: 'НАЗВАНИЕ ТУРА'
+        span: auto
+        type: text
+    slug:
+        label: 'URL ТУРА'
+        span: auto
+        preset: title
+        type: text
+    duration:
+        label: 'ПРОДОЛЖИТЕЛЬНОСТЬ ТУРА'
+        span: left
+        type: text
+    difficulty:
+        label: 'СЛОЖНОСТЬ ТУРА'
+        span: auto
+        type: text
+    requirement:
+        label: ТРЕБОВАНИЯ
+        size: ''
+        span: full
+        type: textarea
+    attraction:
+        label: ДОСТОПРИМЕЧАТЕЛЬНОСТИ
+        size: ''
+        span: full
+        type: textarea
+    season:
+        label: 'ЛУШИЙ СЕЗОН'
+        span: auto
+        type: text
+    desc:
+        label: 'ОПИСАНИЕ ТУРА'
+        size: large
+        span: full
+        type: richeditor
+    preview:
+        label: 'ПРЕВЬЮ ТУРА'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    category:
+        label: КАТЕГОРИИ
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    detail_desc:
+        label: 'ПОДРОБНОЕ ОПИСАНИЕ'
+        prompt: 'Добавить новый пункт'
+        style: default
+        span: full
+        type: repeater
+        comment: 'Аккордеон или Выпадающий список'
+        form:
+            fields:
+                acc_title:
+                    label: ЗАГОЛОВОК
+                    span: full
+                    type: text
+                acc_desc:
+                    label: ОПИСАНИЕ
+                    size: ''
+                    span: full
+                    type: textarea
+                acc_gallery:
+                    label: ГАЛЕРЕЯ
+                    prompt: 'Добавить изображение'
+                    style: default
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            img:
+                                label: ИЗОБРАЖЕНИЕ
+                                mode: image
+                                span: full
+                                hidden: 0
+                                type: mediafinder
+    gallery:
+        label: Слайдер
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    height:
+        label: ВЫСОТА
+        span: auto
+        type: text
+    place:
+        label: 'МЕСТО / НАЗВАНИЕ МЕСТНОСТИ'
+        span: auto
+        type: text
+    is_popular:
+        label: 'НЕПОПУЛЯРНЫЙ / ПОПУЛЯРНЫЙ'
+        span: auto
+        type: switch
+        comment: 'В зависимомти от положения "свитчера", запись либо "активна", либо "неактивна" на сате. (БЛОК С ПОПУЛЯРНЫМИ ТУРАМИ) '
+    is_active:
+        label: 'СКРЫТЬ / ПОКАЗАТЬ'
+        span: auto
+        type: switch
+        comment: 'В зависимомти от положения "свитчера", запись либо "активна", либо "неактивна" на сате.'
+    is_recomend:
+        label: 'НЕРЕКОМЕНДОВАННЫЙ / РЕКОМЕНДОВАННЫЙ'
+        span: auto
+        type: switch

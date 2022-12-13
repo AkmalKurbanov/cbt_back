@@ -1,0 +1,56 @@
+{% if this.page.url == '/search-result' %}
+{% elseif this.page.url == '/tours/t/:cat_slug/:tour_slug' %}
+
+
+<div class="lang">
+  {%if this.locale == 'ru' %}
+  <div class="lang__item active"><a href="/ru/tours/t/{{category.slug}}/{{tour.slug}}"> <span>Ru</span></a></div>
+    <div class="lang__item"><a href="/en/tours/t/{{category.slug}}/{{tour.slug}}"> <span>En </span></a></div>
+  {% else %}
+  <div class="lang__item"><a href="/ru/tours/t/{{category.slug}}/{{tour.slug}}"> <span>Ru</span></a></div>
+    <div class="lang__item active"><a href="/en/tours/t/{{category.slug}}/{{tour.slug}}"> <span>En </span></a></div>
+  {% endif %}
+</div>
+
+
+{% elseif this.page.url == '/tours/c/:cat_slug' %}
+
+
+<div class="lang">
+  {%if this.locale == 'ru' %}
+  <div class="lang__item active"><a href="/ru/tours/c/{{category.slug}}"> <span>Ru </span></a></div>
+  <div class="lang__item"><a href="/en/tours/c/{{category.slug}}"> <span>En </span></a></div>
+  {% else %}
+    <div class="lang__item"><a href="/ru/tours/c/{{category.slug}}"> <span>Ru </span></a></div>
+  <div class="lang__item active"><a href="/en/tours/c/{{category.slug}}"> <span>En </span></a></div>
+  {% endif %}
+</div>
+
+{% elseif this.page.url == '/post/:slug' %}
+
+
+<div class="lang">
+  {%if this.locale == 'ru' %}
+  <div class="lang__item active"><a href="/ru/post/{{post.slug}}"> <span>Ru </span></a></div>
+  <div class="lang__item"><a href="/en/post/{{post.slug}}"> <span>En </span></a></div>
+  {% else %}
+  <div class="lang__item"><a href="/ru/post/{{post.slug}}"> <span>Ru </span></a></div>
+  <div class="lang__item active"><a href="/en/post/{{post.slug}}"> <span>En </span></a></div>
+  {% endif %}
+</div>
+
+{% else %}
+
+
+<div class="lang">
+  {%if this.locale == 'ru' %}
+  <div class="lang__item active"><a href="/ru{{ this.page.url }}"> <span>Ru </span></a></div>
+    <div class="lang__item"><a href="/en{{ this.page.url }}"> <span>En </span></a></div>
+  {% else %}
+  <div class="lang__item"><a href="/ru{{ this.page.url }}"> <span>Ru </span></a></div>
+    <div class="lang__item active"><a href="/en{{ this.page.url }}"> <span>En </span></a></div>
+  {% endif %}
+</div>
+
+
+{% endif %}

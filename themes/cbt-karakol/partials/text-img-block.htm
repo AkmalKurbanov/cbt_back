@@ -1,0 +1,32 @@
+[viewBag]
+snippetCode = "tex-img"
+snippetName = "Блок с текстом и картинкой"
+
+==
+
+{% for field in textImgSection %}
+<div class="pattern__item">
+    {% if field.image %}
+    <div class="pattern__col"><img
+            src="{{ field.image | media | resize(620, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+            alt=""></div>
+    <div class="pattern__col">
+        {% if field.title %}
+        <h3 class="subtitle">{{ field.title }}</h3>
+        {% else %}
+        {% endif %}
+        {{ field.text | raw }}
+    </div>
+    {% else %}
+    <div class="pattern__col" style="max-width:100%">
+        {% if field.title %}
+        <h3 class="subtitle">{{ field.title }}</h3>
+        {% else %}
+        {% endif %}
+        {{ field.text | raw }}
+    </div>
+
+    {% endif %}
+    
+</div>
+{% endfor %}

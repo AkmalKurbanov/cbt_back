@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: ЗАГОЛОВОК
+        type: text
+    desc:
+        label: ОПИСАНИЕ
+        type: text

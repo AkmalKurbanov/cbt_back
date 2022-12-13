@@ -1,0 +1,14 @@
+fields:
+    title:
+        label: 'ИМЯ ФАЙЛА'
+        span: auto
+        type: text
+    price_list:
+        label: ПРАЙС-ЛИСТ
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

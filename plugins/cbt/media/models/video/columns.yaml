@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: ЗАГОЛОВОК
+        type: text
+    desc:
+        label: ОПИСАНИЕ
+        type: text
+    link:
+        label: 'ССЫЛКА НА ВИДЕО'
+        type: text

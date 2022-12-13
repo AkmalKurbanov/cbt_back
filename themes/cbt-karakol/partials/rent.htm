@@ -1,0 +1,55 @@
+[builderList rents]
+modelClass = "Cbt\Rent\Models\Rent"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+==
+<div class="img-group img-group--right">
+    <div class="container">
+        <div class="img-group__wrap">
+            <div class="img-group__col">
+                <div class="img-group__images">
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img1.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img2.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img3.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                </div>
+            </div>
+            <div class="img-group__col">
+                <div class="title-wrap">
+
+                    <h2 class="title">
+                        {{'АРЕНДА'|_}}
+                    </h2>
+                    <h3 class="subtitle">
+                        {{'Вы можете также у нас арендовать туристические снаряжения'|_}}
+                    </h3>
+                </div>
+                <div class="icon-list">
+                    {% for record in records %}
+                    <div class="icon-list__item">
+                        <div class="icon-list__icon"><img
+                                src="{{ record.icon.path | resize(58, 58, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+                                alt=""></div>
+                        <div class="icon-list__name">{{record.title}}</div>
+                    </div>
+                    {% endfor %}
+                </div><a class="btn" href="/rent">{{'Арендовать'|_}} </a>
+            </div>
+        </div>
+    </div>
+</div>

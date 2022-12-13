@@ -1,0 +1,34 @@
+[ToursComponent]
+==
+<div class="kind">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">ВИДЫ ТУРОВ</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper-container kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                {{parent_id}}
+                <div class="swiper-slide"><a class="kind__item shine-ef"
+                        href="/{{this.locale}}/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                alt="">
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                                <img src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                    alt=""></div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

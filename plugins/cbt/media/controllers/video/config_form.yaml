@@ -1,0 +1,10 @@
+name: Video
+form: $/cbt/media/models/video/fields.yaml
+modelClass: Cbt\Media\Models\Video
+defaultRedirect: cbt/media/video
+create:
+    redirect: 'cbt/media/video/update/:id'
+    redirectClose: cbt/media/video
+update:
+    redirect: cbt/media/video
+    redirectClose: cbt/media/video

@@ -1,0 +1,72 @@
+
+<div class="detail__form">
+    <form data-request="{{ genericForm }}::onFormSubmit">
+        {{ form_token() }}
+
+        <div id="{{ genericForm }}_forms_flash"></div>
+        <div class="detail__title">{{ 'Бронировать'|_ }}</div>
+        <div class="booking__item booking__item--date">
+            <div class="booking__item-icon"> <i class="icon-colendar"></i></div>
+            <div>
+                <div class="booking__item-title">{{'Дата'|_}} </div>
+                <div class="booking__date-wrap">
+                    <input id="from" type="text" autocomplete="off" name="Дата">
+                </div>
+            </div>
+        </div>
+        <div class="booking__item">
+            <div class="booking__item-icon">
+                <i class="icon-user"></i>
+            </div>
+            <div>
+                <div class="booking__item-title">
+                    {{ 'Гости'|_ }}
+                </div>
+                <div class="person-count">
+                    <input type="number" value="2" min="1" name="Количество персон" /><span>{{ 'персоны'|_ }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="booking__item">
+            <div class="booking__item-icon">
+                <i class="icon-user"></i>
+            </div>
+            <div>
+                <label for="name" class="booking__item-title">
+                    {{ 'Имя'|_ }}
+                </label>
+                <input type="text" id="name" name="Имя" placeholder="Иванов Сергей">
+
+            </div>
+        </div>
+        <div class="booking__item">
+            <div class="booking__item-icon">
+                <i class="icon-user"></i>
+            </div>
+            <div>
+                <label for="email" class="booking__item-title">
+                    {{ 'email'|_ }}
+                </label>
+                <input type="text" id="email" name="email" placeholder="email@gmail.com">
+
+            </div>
+        </div>
+        <div class="booking__item">
+            <div class="booking__item-icon">
+                <i class="icon-phone"></i>
+            </div>
+            <div>
+                <label for="phone" class="booking__item-title">
+                    {{ 'Номер телефона'|_ }}
+                </label>
+                <input type="text" id="phone" name="Телефон" placeholder="+996 999 999 999">
+
+            </div>
+        </div>
+        <input type="hidden" name="Категория" value="{{category.title}}">
+        <input type="hidden" name="Название тура" value="{{tour.title}}">
+        <input type="hidden" name="Продолжительность тура" value="{{tour.duration}}">
+        <input type="hidden" name="Сложность тура" value="{{tour.difficulty}}">
+        <button id="simpleContactSubmitButton" type="submit" class="btn">{{ 'Бронировать'|_ }}</button>
+    </form>
+</div>

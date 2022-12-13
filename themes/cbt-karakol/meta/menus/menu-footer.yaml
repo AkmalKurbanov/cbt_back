@@ -1,0 +1,22 @@
+items:
+    -
+        title: 'О нас'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: about
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Главная
+        type: cms-page
+        code: ''
+        reference: home
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Меню подвала'

@@ -1,0 +1,70 @@
+url = "/post/:slug"
+layout = "default"
+title = "Пост"
+
+[viewBag]
+localeUrl[en] = "/post/:slug"
+localeTitle[en] = "Post"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = 404
+
+[siteSearchInclude]
+
+[SeoBlogPost]
+post = "post"
+==
+{% set post = blogPost.post %}
+
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+            <li><a href="/blog">{{'Блог'|_}}</a></li>
+            <li>{{post.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="container">
+        <div class="gallery-container">
+            <div class="swiper-container gallery-main">
+                <div class="swiper-wrapper">
+
+                    {% for image in post.featured_images %}
+                    <div class="swiper-slide" style="background-image: url('{{ image.path | resize(1250, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}')"></div>
+                    {% endfor %}
+
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+
+                    {% for image in post.featured_images %}
+                    <div class="swiper-slide" style="background-image: url('{{ image.path | resize(240, 200, { mode: 'crop', quality: '80', extension: 'webp'}) }}')"></div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <h2 class="title">{{post.title}}</h2>
+        </div>
+        <div class="desc-text">
+            <div class="article-date">
+                <span>
+                    <i class="icon-user"></i>
+                    {{post.user.first_name}}
+                    {{post.user.last_name}}
+                </span>
+                <span>{{post.published_at | date ('d M Y')}}</span></div>
+            {{ post.content_html|raw }}
+        </div>
+    </div>
+</div>

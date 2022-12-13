@@ -1,0 +1,4 @@
+columns:
+    title:
+        label: 'ИМЯ ФАЙЛА'
+        type: text

@@ -1,0 +1,64 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+            <li>
+                <a href="/{{this.locale}}/tours">{{'Туры'|_}}</a>
+            </li>
+            <li>{{category.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="tours">
+    <div class="container">
+
+        <div class="title-wrap">
+            <h2 class="title">{{category.title}}</h2>
+        </div>
+
+        <div class="tours__category">
+            <div class="swiper-container tours-js">
+                <div class="swiper-wrapper">
+
+                    {% for item in categories %}
+
+                    {% if item.slug == category.slug %}
+                    {% else %}
+
+                    <div class="swiper-slide">
+                        <a class="tours__category-item" href="/{{this.locale}}/tours/c/{{item.slug}}">
+                            <div class="tours__category-icon">
+                                <img src="{{item.iconDark.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                    alt="">
+                            </div>
+                            <div class="tours__category-name">{{item.title}}</div>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="tours__wrap">
+
+            {% for item in tours %}
+            {%if item.is_active == 1%}
+            <div class="tours__item">
+                <a class="tours__item-img" href="/{{this.locale}}/tours/t/{{ category.slug}}/{{item.slug}}">
+                    <img src="{{ item.preview.path | resize(540, 300, { mode: 'crop', quality: '80', extension: 'webp' }) }}"
+                        alt="">
+                </a>
+                <div class="tours__item-info"><a class="tours__item-name"
+                        href="/{{this.locale}}/tours/t/{{ category.slug}}/{{item.slug}}">{{item.title}}</a>
+                    <div class="tours__item-desc">{{ str_limit(item.desc , 120) | raw }}</div>
+                </div>
+            </div>
+            {% else %}
+
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

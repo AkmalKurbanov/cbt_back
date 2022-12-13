@@ -1,0 +1,14 @@
+      <div class="pass-form"
+          style="background-image:
+          url('{{ 'assets/images/pass-form.jpg'|theme | resize(1920, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}')">
+          <div class="container">
+              <div class="title-wrap title-wrap--white">
+                  {% component 'contenteditor' file="pass-form-title.htm" fixture="h2" class="title" tools="line-break" %}
+                  
+              </div>
+              <div class="pass-form__wrap">
+                  {% component 'contenteditor' file="pass-form-text.htm" fixture="p" tools="line-break" class="" %}
+                  <a class="btn" href="{{ 'form-pass'|page }}">{{'Заполнить анкету'|_}} </a>
+              </div>
+          </div>
+      </div>

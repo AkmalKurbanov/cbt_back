@@ -1,0 +1,94 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">{{ 'Главная'|_ }}</a></li>
+            <li><a href="{{'tours/index'|page}}">{{ 'Туры'|_ }}</a></li>
+            <li><a href="/{{this.locale}}/tours/c/{{category.slug}}">{{category.title}}</a></li>
+            <li>{{tour.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="container">
+        <div class="gallery-container">
+            <div class="swiper-container gallery-main">
+                <div class="swiper-wrapper">
+                    {% for image in tour.gallery %}
+                    <div class="swiper-slide"
+                        style="background-image:url('{{ image.path | resize(1250, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}')">
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    {% for image in tour.gallery %}
+                    <div class="swiper-slide"
+                        style="background-image:url('{{ image.path | resize(250, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}')">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <h2 class="title">{{tour.title}}</h2>
+        </div>
+        <div class="desc-text">
+            <div class="desc-text__wrap">
+                <div class="desc-text__col">
+                    {{tour.desc|raw}}
+                    <div class="accordion">
+                        {% for acc in tour.detail_desc %}
+                        <div class="accordion__item">
+                            <div class="accordion__title">
+                                {{acc.acc_title}}<i class="icon-right"></i>
+                            </div>
+                            <div class="accordion__desc-wrap">
+                                <div class="accordion__desc">
+                                    <p>{{acc.acc_desc}}</p>
+                                </div>
+                                <div class="accordion__desc-img">
+                                    {% for galleryDay in acc.acc_gallery %}
+
+                                    <a href="{{galleryDay.img | media | resize(1300, auto, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                        data-fancybox="">
+                                        <img src="{{galleryDay.img | media | resize(300, auto, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                            alt="" />
+                                    </a>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="desc-text__col">
+                    <div class="detail__desc">
+                        <div class="detail__desc-wrap">
+                            <div class="detail__title">{{ 'Краткое описание'|_ }}</div>
+                            <ul>
+                                <li>
+                                    <span>{{ 'Продолжительность'|_ }}:</span> {{tour.duration}}
+                                </li>
+                                <li>
+                                    <span>{{ 'Уровень сложности'|_ }}:</span> {{tour.difficulty}}
+                                </li>
+                                <li><span>{{ 'Лучший сезон'|_ }}:</span> {{tour.season}}</li>
+                                <li>
+                                    <span>{{ 'Достопримечательности'|_ }}:</span> {{tour.attraction}}
+                                </li>
+                                <li>
+                                    <span>{{ 'Требования'|_ }}:</span> {{tour.requirement}}
+                                </li>
+                            </ul>
+                        </div>
+                        {% partial 'form' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
