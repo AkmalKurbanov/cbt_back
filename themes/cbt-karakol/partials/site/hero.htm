@@ -1,11 +1,16 @@
+
 <div class="hero">
+    <div class="hero-mobile-bg">
+        <img class="lazy" data-src="{{ 'assets/images/hero-mobile-bg.webp'|theme }}"
+            alt="">
+
+    </div>
     <header class="header header--transparent">
         <div class="container">
             <div class="header__wrap">
                 <div class="logo">
                     <a href="{{ 'home'|page }}">
-                        <img
-                            src="{{ this.theme.logoHeaderMain.path | resize(125, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                        <img class="lazy" data-src="{{ this.theme.logoHeaderMain.path | resize(125, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
                     </a>
                 </div>
                 <div class=" header__left-col">
@@ -81,7 +86,9 @@
 
             {% for item in this.theme.heroSlider %}
             <div class="swiper-slide">
-                <div class="hero__item" style="background-image: url('{{item.heroSlide | media | resize(1920, 1000, { mode: 'crop', quality: '80', extension: 'webp' })}}')"></div>
+                <div class="hero__item"
+                    style="background-image: url('{{item.heroSlide | media | resize(1920, 1000, { mode: 'crop', quality: '80', extension: 'webp' })}}')">
+                </div>
             </div>
             {%endfor%}
         </div>
@@ -94,36 +101,36 @@
             <div class="booking__wrap">
                 <div class="booking__col">
 
-                   
 
-                        <div class="booking__item-wrap">
-                            <div class="booking__item booking__item--date">
-                                <div class="booking__item-icon"> <i class="icon-colendar"></i></div>
-                                <div>
-                                    <div class="booking__item-title">{{'Дата'|_}} </div>
-                                    <div class="booking__date-wrap">
-                                        <span>
-                                            <input id="start-date" type="text" autocomplete="off" name="from">
-                                        </span>
-                                        /
-                                        <span>
-                                            <input id="end-date" type="text" autocomplete="off" name="to" disabled>
-                                        </span>
 
-                                    </div>
+                    <div class="booking__item-wrap">
+                        <div class="booking__item booking__item--date">
+                            <div class="booking__item-icon"> <i class="icon-colendar"></i></div>
+                            <div>
+                                <div class="booking__item-title">{{'Дата'|_}} </div>
+                                <div class="booking__date-wrap">
+                                    <span>
+                                        <input id="start-date" type="text" autocomplete="off" name="from">
+                                    </span>
+                                    /
+                                    <span>
+                                        <input id="end-date" type="text" autocomplete="off" name="to" disabled>
+                                    </span>
+
                                 </div>
                             </div>
-                            <div class="booking__item">
-                                <div class="booking__item-icon"> <i class="icon-user"></i></div>
-                                <div>
-                                    <div class="booking__item-title">{{'Гости'|_}} </div>
-                                    <div class="person-count">
-                                        <input type="number" value="2" min="1"><span>{{'персоны'|_}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn booking-js" disabled>{{'Бронировать'|_}}</button>
                         </div>
+                        <div class="booking__item">
+                            <div class="booking__item-icon"> <i class="icon-user"></i></div>
+                            <div>
+                                <div class="booking__item-title">{{'Гости'|_}} </div>
+                                <div class="person-count">
+                                    <input type="number" value="2" min="1"><span>{{'персоны'|_}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn booking-js" disabled>{{'Бронировать'|_}}</button>
+                    </div>
 
 
 

@@ -18,7 +18,9 @@
         "offline/sitesearch-plugin": "^1.5",
         "samuell/contenteditor-plugin": "^1.3",
         "initbiz/seostorm-plugin": "^4.6",
-        "romanov/clearcachewidget-plugin": "^1.3"
+        "romanov/clearcachewidget-plugin": "^1.3",
+        "rainlab/deploy-plugin": "^2.1",
+        "offline/oc-speedy-plugin": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5|^9.0"

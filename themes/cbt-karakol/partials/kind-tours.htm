@@ -16,12 +16,13 @@
                 <div class="swiper-slide"><a class="kind__item shine-ef"
                         href="/{{this.locale}}/tours/c/{{item.slug}}">
                         <div class="kind__img">
-                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                            <img class="lazy"
+                                data-src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
                                 alt="">
                         </div>
                         <div class="kind__item-desc">
                             <div class="kind__icon">
-                                <img src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                <img class="lazy" data-src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
                                     alt=""></div>
                             <div class="kind__name">{{item.title}}</div>
                         </div>

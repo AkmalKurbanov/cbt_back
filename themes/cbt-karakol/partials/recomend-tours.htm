@@ -20,7 +20,7 @@
                 
                 <a class="block-tour__item" href="/tours/t/{{item.category.slug}}/{{item.slug}}">
                     <div class="block-tour__img">
-                        <img src="{{item.preview.path | resize(300, 150, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                        <img class="lazy" data-src="{{item.preview.path | resize(300, 150, { mode: 'crop', quality: '80', extension: 'webp' })}}"
                             alt="">
                     </div>
                     <div class="block-tour__item-desc">

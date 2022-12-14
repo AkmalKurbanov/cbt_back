@@ -43,7 +43,8 @@ pageNumber = "{{ :page }}"
                     {% for record in records %}
                     <div class="icon-list__item">
                         <div class="icon-list__icon"><img
-                                src="{{ record.icon.path | resize(58, 58, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+                                class="lazy"
+                                data-src="{{ record.icon.path | resize(58, 58, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
                                 alt=""></div>
                         <div class="icon-list__name">{{record.title}}</div>
                     </div>

@@ -1,7 +1,5 @@
 description = "Шаблон по умолчанию"
 
-[fontAwesomeCssLink]
-
 [sitePicker]
 
 [staticPage]
@@ -30,6 +28,8 @@ recaptcha_size = "normal"
 emails_date_format = "Y-m-d"
 
 [seo]
+
+[fontAwesomeCssLink]
 ==
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@ emails_date_format = "Y-m-d"
 <head>
     {% partial 'GA4-head' %}
     {% partial 'site/meta' %}
-   {% component 'seo' %}
+    {% component 'seo' %}
 </head>
 
 <body class="{{ 'page-'~this.page.id }}">
@@ -46,6 +46,7 @@ emails_date_format = "Y-m-d"
 
     <div class="wrapper">
         <div class="content">
+           
             {% if this.page.url == '/' %}
             {% partial 'site/hero' %}
 

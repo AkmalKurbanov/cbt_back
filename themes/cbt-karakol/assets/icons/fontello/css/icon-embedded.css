@@ -4,6 +4,7 @@
   src: url('../font/icon.eot?99490553#iefix') format('embedded-opentype'),       url('../font/icon.svg?99490553#icon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {

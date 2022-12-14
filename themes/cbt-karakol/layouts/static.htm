@@ -1,7 +1,5 @@
 description = "Шаблон статических страниц"
 
-[fontAwesomeCssLink]
-
 [sitePicker]
 
 [staticPage]
@@ -13,6 +11,8 @@ default = 0
 [contenteditor]
 
 [seo]
+
+[fontAwesomeCssLink]
 ==
 {repeater name="textImgSection" tab="Секция с текстом и картинкой" prompt="Добавить секцию"}
 {variable name="title" label="Заголовок" type="text"}{/variable}
@@ -34,6 +34,7 @@ default = 0
 {% partial 'GA4-body' %}
     <div class="wrapper">
         <div class="content">
+       
             {% if this.page.url == '/' %}
             {% partial 'site/hero' %}
 
@@ -84,14 +85,7 @@ default = 0
     </div>
 
 
-    <script>
-        $(".main-page-lang select option").each(function () {
-            var str = $(this).val();
-            var sfds = str.slice(0, -4);
-            $(this).val(sfds);
-        });
-
-    </script>
+    
 </body>
 
 </html>
