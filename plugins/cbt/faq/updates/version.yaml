@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table cbt_faq_'
+    - builder_table_create_cbt_faq_.php
+1.0.3:
+    - 'Updated table cbt_faq_'
+    - builder_table_update_cbt_faq_.php
+1.0.4:
+    - 'Updated table cbt_faq_'
+    - builder_table_update_cbt_faq__2.php

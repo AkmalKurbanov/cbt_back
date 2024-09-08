@@ -1,0 +1,21 @@
+fields:
+    title:
+        label: ЗАГОЛОВОК
+        span: left
+        type: text
+        comment: 'Желательно короткий'
+    desc:
+        label: ОПИСАНИЕ
+        size: ''
+        span: auto
+        type: textarea
+        comment: 'Желательно короткое'
+    photo:
+        label: ФОТО
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

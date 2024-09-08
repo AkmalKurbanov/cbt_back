@@ -1,0 +1,47 @@
+[ToursComponent]
+==
+<div class="kind">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                {{parent_id}}
+                <div class="swiper-slide">
+                <a class="kind__item shine-ef"
+                        href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+
+                          {% if item.img.path  %}
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                            {% else %}
+                            <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                          {% endif %}
+
+
+                            
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                              {% if item.icon.path  %}
+                                <img src="{{item.icon.path | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                                {% else %}
+                                <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                              {% endif %}
+                              
+                            </div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

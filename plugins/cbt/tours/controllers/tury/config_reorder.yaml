@@ -1,0 +1,5 @@
+title: Туры
+modelClass: Cbt\Tours\Models\Tur
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,91 @@
+description = "Шаблон статических страниц"
+
+[sitePicker]
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticBreadcrumbs]
+
+[contenteditor]
+
+[seo]
+
+[fontAwesomeCssLink]
+==
+{repeater name="textImgSection" tab="Секция с текстом и картинкой" prompt="Добавить секцию"}
+{variable name="title" label="Заголовок" type="text"}{/variable}
+{variable name="text" label="Контент" type="richeditor" mode="wysiwyg"}{/variable}
+{variable name="image" label="Изображение" type="mediafinder" mode="image"}{/variable}
+{/repeater}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% partial 'GA4-head' %}
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+{% partial 'GA4-body' %}
+    <div class="wrapper">
+        <div class="content">
+       
+            {% if this.page.url == '/' %}
+            {% partial 'site/hero' %}
+
+            {% else %}
+            <!-- Header -->
+            {% partial 'site/header' %}
+
+            {% endif %}
+
+
+            <!-- Content -->
+            <section id="layout-content">
+
+                <div class="breadcrumbs">
+                    <div class="container">
+
+                        {% if breadcrumbs %}
+
+                        <ul>
+
+                            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+                            {% for breadcrumb in breadcrumbs %}
+                            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+
+                                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="title-wrap">
+                        <h2 class="title">{{this.page.title}}</h2>
+                    </div>
+                    <div class="pattern">
+                        {% page  %}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+    </div>
+
+
+    
+</body>
+
+</html>

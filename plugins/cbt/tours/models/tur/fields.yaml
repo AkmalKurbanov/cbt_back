@@ -1,0 +1,140 @@
+tabs:
+    fields:
+        name:
+            label: 'НАЗВАНИЕ ТУРА'
+            span: auto
+            type: text
+            tab: 'Главная информация'
+        slug:
+            label: 'URL ТУРА'
+            span: auto
+            preset: name
+            type: text
+            tab: 'Главная информация'
+        desc:
+            label: 'ОПИСАНИЕ ТУРА'
+            size: large
+            span: full
+            type: richeditor
+            tab: 'Описание тура'
+        season:
+            label: 'ЛУШИЙ СЕЗОН'
+            span: auto
+            type: text
+            tab: 'Описание тура'
+        height:
+            label: ВЫСОТА
+            span: auto
+            type: text
+            tab: 'Описание тура'
+        place:
+            label: 'МЕСТО / НАЗВАНИЕ МЕСТНОСТИ'
+            span: full
+            type: text
+            tab: 'Описание тура'
+        duration:
+            label: 'ПРОДОЛЖИТЕЛЬНОСТЬ ТУРА'
+            span: auto
+            type: text
+            tab: 'Доп. информация'
+        difficulty:
+            label: 'СЛОЖНОСТЬ ТУРА'
+            span: auto
+            type: text
+            tab: 'Доп. информация'
+        requirement:
+            label: ТРЕБОВАНИЯ
+            size: ''
+            span: full
+            type: textarea
+            tab: 'Доп. информация'
+        attraction:
+            label: ДОСТОПРИМЕЧАТЕЛЬНОСТИ
+            size: ''
+            span: full
+            type: textarea
+            tab: 'Доп. информация'
+        category:
+            label: КАТЕГОРИИ
+            nameFrom: title
+            descriptionFrom: description
+            span: left
+            type: relation
+            tab: 'Категория тура'
+        detail_desc:
+            label: 'ПОДРОБНОЕ ОПИСАНИЕ'
+            prompt: 'Добавить новый пункт'
+            style: default
+            span: full
+            type: repeater
+            comment: 'Аккордеон или Выпадающий список'
+            tab: 'Выпадающий список'
+            form:
+                fields:
+                    acc_title:
+                        label: ЗАГОЛОВОК
+                        span: full
+                        type: text
+                    acc_desc:
+                        label: ОПИСАНИЕ
+                        size: ''
+                        span: full
+                        type: textarea
+                    acc_gallery:
+                        label: ГАЛЕРЕЯ
+                        prompt: 'Добавить изображение'
+                        style: default
+                        span: full
+                        type: repeater
+                        form:
+                            fields:
+                                img:
+                                    label: ИЗОБРАЖЕНИЕ
+                                    mode: image
+                                    span: full
+                                    hidden: 0
+                                    type: mediafinder
+        preview:
+            label: 'ПРЕВЬЮ ТУРА'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Изображения
+        gallery:
+            label: Слайдер
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Изображения
+        is_popular:
+            label: 'НЕПОПУЛЯРНЫЙ / ПОПУЛЯРНЫЙ'
+            span: auto
+            type: switch
+            comment: 'В зависимомти от положения "свитчера", запись либо "активна", либо "неактивна" на сайте. (БЛОК С ПОПУЛЯРНЫМИ ТУРАМИ)'
+            tab: 'Статусы тура'
+        is_recomend:
+            label: 'НЕРЕКОМЕНДОВАННЫЙ / РЕКОМЕНДОВАННЫЙ'
+            span: auto
+            type: switch
+            comment: 'В зависимомти от положения "свитчера", запись либо "активна", либо "неактивна". (БЛОК С РЕКОМЕНДАЦИЯМИ В СЕКЦИИ ПОД БРОНИРОВАНИЕМ)'
+            tab: 'Статусы тура'
+        is_active:
+            label: 'СКРЫТЬ / ПОКАЗАТЬ'
+            span: auto
+            type: switch
+            comment: 'В зависимомти от положения "свитчера", запись либо "активна", либо "неактивна" на сате.'
+            tab: 'Статусы тура'
+        map:
+            label: 'Карта тура'
+            comment: 'Вставьте URL карты из (Google My Maps)'
+            span: full
+            type: text
+            tab: 'Карта тура'

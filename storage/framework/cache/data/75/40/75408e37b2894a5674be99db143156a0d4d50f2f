@@ -1,0 +1,104 @@
+1725876918a:1:{s:13:"blog/post.htm";a:12:{s:8:"fileName";s:13:"blog/post.htm";s:7:"content";s:1649:"url = "/post/:slug"
+layout = "default"
+title = "Пост"
+
+[viewBag]
+localeUrl[en] = "/post/:slug"
+localeTitle[en] = "Post"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = 404
+
+[siteSearchInclude]
+
+[SeoBlogPost]
+post = "post"
+==
+{% set post = blogPost.post %}
+
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li>{{post.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="container">
+
+      <div class="gallery-detail">
+        <div class="f-carousel" id="gallery-detail-js">
+          
+          {% for image in post.featured_images %}
+              <div class="f-carousel__slide" data-thumb-src="{{ image.path | resize(100, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                <img alt="" data-lazy-src="{{ image.path | resize(1250, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}">
+              </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+        
+        
+        <div class="title-wrap">
+            <h2 class="title">{{post.title}}</h2>
+        </div>
+        <div class="desc-text">
+            <div class="article-date">
+                <span>
+                    <i class="icon-user2"></i>
+                    {{post.user.first_name}}
+                    {{post.user.last_name}}
+                </span>
+                <span>{{post.published_at | date ('d m Y')}}</span></div>
+            {{ post.content_html|raw }}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1725789216;s:6:"markup";s:1403:"{% set post = blogPost.post %}
+
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li>{{post.title}}</li>
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="container">
+
+      <div class="gallery-detail">
+        <div class="f-carousel" id="gallery-detail-js">
+          
+          {% for image in post.featured_images %}
+              <div class="f-carousel__slide" data-thumb-src="{{ image.path | resize(100, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                <img alt="" data-lazy-src="{{ image.path | resize(1250, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}">
+              </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+        
+        
+        <div class="title-wrap">
+            <h2 class="title">{{post.title}}</h2>
+        </div>
+        <div class="desc-text">
+            <div class="article-date">
+                <span>
+                    <i class="icon-user2"></i>
+                    {{post.user.first_name}}
+                    {{post.user.last_name}}
+                </span>
+                <span>{{post.published_at | date ('d m Y')}}</span></div>
+            {{ post.content_html|raw }}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:11:"/post/:slug";s:6:"layout";s:7:"default";s:5:"title";s:8:"Пост";s:7:"viewBag";a:2:{s:9:"localeUrl";a:1:{s:2:"en";s:11:"/post/:slug";}s:11:"localeTitle";a:1:{s:2:"en";s:4:"Post";}}s:8:"blogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:3:"404";}s:17:"siteSearchInclude";a:0:{}s:11:"SeoBlogPost";a:1:{s:4:"post";s:4:"post";}}}

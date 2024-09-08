@@ -1,0 +1,40 @@
+[builderList faq]
+modelClass = "Cbt\Faq\Models\Faq"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<div class="faq"> 
+  <div class="container"> 
+    <div class="title-wrap">
+      <h2 class="title">FAQ</h2>
+    </div>
+    <div class="accordion">
+                  
+
+          {% for record in records %}
+            {% if record.is_active %}
+              <div class="accordion__item">
+                <div class="accordion__title">{{record.title}}<i class="icon-angle-right"></i>
+                </div>
+                <div class="accordion__desc-wrap">
+                  <div class="accordion__desc accordion__desc_faq">
+                    <p>{{record.desc| raw}}</p>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+            
+            {% endif %}
+      {% else %}
+          {{ noRecordsMessage }}
+      {% endfor %}
+               
+                  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+columns:
+    name:
+        label: НАЗВАНИЕ
+        type: text
+    is_active:
+        label: АКТИВНЫЙ
+        type: text
+    is_popular:
+        label: ПОПУЛЯРНЫЙ
+        type: text
+    duration:
+        label: ПРОДОЛЖИТЕЛЬНОСТЬ
+        type: text
+    difficulty:
+        label: СЛОЖНОСТЬ
+        type: text
+    season:
+        label: СЕЗОН
+        type: text
+    attraction:
+        label: ДОСТОПРИМ.
+        type: text
+    requirement:
+        label: ТРЕБОВАНИЯ
+        type: text
+    height:
+        label: ВЫСОТА
+        type: text
+    place:
+        label: МЕСТНОСТЬ
+        type: text
+    created_at:
+        label: СОЗДАН
+        type: datetime
+    updated_at:
+        label: ОБНОВЛЕН
+        type: datetime
+    deleted_at:
+        label: УДАЛЕН
+        type: datetime
+    is_recomend:
+        label: РЕКОМЕНДОВАННЫЙ
+        type: text

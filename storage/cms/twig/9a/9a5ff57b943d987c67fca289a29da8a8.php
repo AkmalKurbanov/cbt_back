@@ -1,0 +1,176 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* C:\work\backend\domains\cbt-karakol\themes/cbt-karakol/partials/site/booking-popup.htm */
+class __TwigTemplate_1f608446bd629fe2a3e2054a7e60851b extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<div class=\"booking-popup\">
+    <div class=\"booking-popup__window\">
+        <div class=\"booking-popup__window-close\">&#x2715</div>
+        <h2>BOOKING</h2>
+        <div class=\"booking-popup__total-info\">
+            <div class=\"booking-popup__info-item\">
+                <div class=\"booking-popup__total-item-title\">Number of persons</div>
+                <div class=\"booking-popup__total-item-value person-count-js\"></div>
+            </div>
+            <div class=\"booking-popup__info-item booking-popup__info-item--date\">
+                <div class=\"booking-popup__date-wrap\">
+                    <div class=\"booking-popup__total-item-title\">Date from</div>
+                    <div class=\"booking-popup__total-item-value date-from-js\"></div>
+                </div>
+                <div class=\"booking-popup__date-wrap\">
+                    <div class=\"booking-popup__total-item-title\">date to</div>
+                    <div class=\"booking-popup__total-item-value date-to-js\"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <form data-request=\"";
+        // line 23
+        echo twig_escape_filter($this->env, ($context["genericForm"] ?? null), "html", null, true);
+        echo "::onFormSubmit\">
+
+            ";
+        // line 25
+        echo $this->env->getFunction('form_token')->getCallable()("token");
+        echo "
+
+            <div id=\"";
+        // line 27
+        echo twig_escape_filter($this->env, ($context["genericForm"] ?? null), "html", null, true);
+        echo "_forms_flash\"></div>
+            <br>
+            <div class=\"input-wrap\">
+                <input class=\"booking-popup__person-value\" type=\"hidden\" name=\"Количество человек\" value=\"\">
+                <input class=\"booking-popup__date-from-value\" type=\"hidden\" name=\"Дата с\" value=\"\">
+                <input class=\"booking-popup__date-to-value\" type=\"hidden\" name=\"Дата по\" value=\"\">
+                <div class=\"input\">
+                    <label for=\"name\">Name</label>
+                    <input id=\"name\" type=\"text\" name=\"Имя\">
+                </div>
+                <div class=\"input\">
+                    <label for=\"email\">Email</label>
+                    <input id=\"email\" type=\"text\" name=\"email\">
+                </div>
+                <div class=\"input input_phone\">
+                    <label for=\"phone\">Phone number</label>
+                    <input class=\"phone-js\" name=\"phone\" type=\"tel\" placeholder id=\"phone\">
+                    <div class=\"output-success\">The number is valid!</div>
+                    <div class=\"output-error\">Wrong number. Try again.</div>
+              </div>
+
+                <div class=\"booking-popup__btn-wrap\">
+                    <div class=\"btn btn--red booking-popup__cancel\">Cancel</div>
+                    <button id=\"simpleContactSubmitButton\" type=\"submit\" class=\"btn btn-default\">Booking</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>";
+    }
+
+    public function getTemplateName()
+    {
+        return "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/partials/site/booking-popup.htm";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  71 => 27,  66 => 25,  61 => 23,  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<div class=\"booking-popup\">
+    <div class=\"booking-popup__window\">
+        <div class=\"booking-popup__window-close\">&#x2715</div>
+        <h2>BOOKING</h2>
+        <div class=\"booking-popup__total-info\">
+            <div class=\"booking-popup__info-item\">
+                <div class=\"booking-popup__total-item-title\">Number of persons</div>
+                <div class=\"booking-popup__total-item-value person-count-js\"></div>
+            </div>
+            <div class=\"booking-popup__info-item booking-popup__info-item--date\">
+                <div class=\"booking-popup__date-wrap\">
+                    <div class=\"booking-popup__total-item-title\">Date from</div>
+                    <div class=\"booking-popup__total-item-value date-from-js\"></div>
+                </div>
+                <div class=\"booking-popup__date-wrap\">
+                    <div class=\"booking-popup__total-item-title\">date to</div>
+                    <div class=\"booking-popup__total-item-value date-to-js\"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <form data-request=\"{{ genericForm }}::onFormSubmit\">
+
+            {{ form_token() }}
+
+            <div id=\"{{ genericForm }}_forms_flash\"></div>
+            <br>
+            <div class=\"input-wrap\">
+                <input class=\"booking-popup__person-value\" type=\"hidden\" name=\"Количество человек\" value=\"\">
+                <input class=\"booking-popup__date-from-value\" type=\"hidden\" name=\"Дата с\" value=\"\">
+                <input class=\"booking-popup__date-to-value\" type=\"hidden\" name=\"Дата по\" value=\"\">
+                <div class=\"input\">
+                    <label for=\"name\">Name</label>
+                    <input id=\"name\" type=\"text\" name=\"Имя\">
+                </div>
+                <div class=\"input\">
+                    <label for=\"email\">Email</label>
+                    <input id=\"email\" type=\"text\" name=\"email\">
+                </div>
+                <div class=\"input input_phone\">
+                    <label for=\"phone\">Phone number</label>
+                    <input class=\"phone-js\" name=\"phone\" type=\"tel\" placeholder id=\"phone\">
+                    <div class=\"output-success\">The number is valid!</div>
+                    <div class=\"output-error\">Wrong number. Try again.</div>
+              </div>
+
+                <div class=\"booking-popup__btn-wrap\">
+                    <div class=\"btn btn--red booking-popup__cancel\">Cancel</div>
+                    <button id=\"simpleContactSubmitButton\" type=\"submit\" class=\"btn btn-default\">Booking</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>", "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/partials/site/booking-popup.htm", "");
+    }
+}

@@ -1,0 +1,10 @@
+name: Faq
+form: $/cbt/faq/models/faq/fields.yaml
+modelClass: Cbt\Faq\Models\Faq
+defaultRedirect: cbt/faq/faq
+create:
+    redirect: 'cbt/faq/faq/update/:id'
+    redirectClose: cbt/faq/faq
+update:
+    redirect: cbt/faq/faq
+    redirectClose: cbt/faq/faq

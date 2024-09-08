@@ -1,0 +1,1 @@
+1717989045a:1:{s:6:"fields";a:3:{s:5:"title";a:3:{s:5:"label";s:18:"Заголовок";s:4:"span";s:4:"auto";s:4:"type";s:4:"text";}s:4:"desc";a:4:{s:5:"label";s:16:"Описание";s:4:"size";s:0:"";s:4:"span";s:5:"right";s:4:"type";s:10:"richeditor";}s:9:"is_active";a:3:{s:5:"label";s:31:"СКРЫТЬ / ПОКАЗАТЬ";s:4:"span";s:4:"left";s:4:"type";s:6:"switch";}}}

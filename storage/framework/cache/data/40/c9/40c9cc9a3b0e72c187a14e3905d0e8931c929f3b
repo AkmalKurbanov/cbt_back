@@ -1,0 +1,165 @@
+1725757166a:1:{s:10:"static.htm";a:12:{s:8:"fileName";s:10:"static.htm";s:7:"content";s:2353:"description = "Шаблон статических страниц"
+
+[sitePicker]
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticBreadcrumbs]
+
+[contenteditor]
+
+[seo]
+
+[fontAwesomeCssLink]
+==
+{repeater name="textImgSection" tab="Секция с текстом и картинкой" prompt="Добавить секцию"}
+{variable name="title" label="Заголовок" type="text"}{/variable}
+{variable name="text" label="Контент" type="richeditor" mode="wysiwyg"}{/variable}
+{variable name="image" label="Изображение" type="mediafinder" mode="image"}{/variable}
+{/repeater}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% partial 'GA4-head' %}
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+{% partial 'GA4-body' %}
+    <div class="wrapper">
+        <div class="content">
+       
+            {% if this.page.url == '/' %}
+            {% partial 'site/hero' %}
+
+            {% else %}
+            <!-- Header -->
+            {% partial 'site/header' %}
+
+            {% endif %}
+
+
+            <!-- Content -->
+            <section id="layout-content">
+
+                <div class="breadcrumbs">
+                    <div class="container">
+
+                        {% if breadcrumbs %}
+
+                        <ul>
+
+                            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+                            {% for breadcrumb in breadcrumbs %}
+                            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+
+                                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="title-wrap">
+                        <h2 class="title">{{this.page.title}}</h2>
+                    </div>
+                    <div class="pattern">
+                        {% page  %}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+    </div>
+
+
+    
+</body>
+
+</html>";s:5:"mtime";i:1715714300;s:6:"markup";s:2145:"{repeater name="textImgSection" tab="Секция с текстом и картинкой" prompt="Добавить секцию"}
+{variable name="title" label="Заголовок" type="text"}{/variable}
+{variable name="text" label="Контент" type="richeditor" mode="wysiwyg"}{/variable}
+{variable name="image" label="Изображение" type="mediafinder" mode="image"}{/variable}
+{/repeater}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% partial 'GA4-head' %}
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+{% partial 'GA4-body' %}
+    <div class="wrapper">
+        <div class="content">
+       
+            {% if this.page.url == '/' %}
+            {% partial 'site/hero' %}
+
+            {% else %}
+            <!-- Header -->
+            {% partial 'site/header' %}
+
+            {% endif %}
+
+
+            <!-- Content -->
+            <section id="layout-content">
+
+                <div class="breadcrumbs">
+                    <div class="container">
+
+                        {% if breadcrumbs %}
+
+                        <ul>
+
+                            <li><a href="{{ 'home'|page }}">{{'Главная'|_}}</a></li>
+                            {% for breadcrumb in breadcrumbs %}
+                            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+
+                                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="title-wrap">
+                        <h2 class="title">{{this.page.title}}</h2>
+                    </div>
+                    <div class="pattern">
+                        {% page  %}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+    </div>
+
+
+    
+</body>
+
+</html>";s:4:"code";N;s:11:"description";s:50:"Шаблон статических страниц";s:10:"sitePicker";a:0:{}s:10:"staticPage";a:2:{s:10:"useContent";s:1:"1";s:7:"default";s:1:"0";}s:17:"staticBreadcrumbs";a:0:{}s:13:"contenteditor";a:0:{}s:3:"seo";a:0:{}s:18:"fontAwesomeCssLink";a:0:{}}}

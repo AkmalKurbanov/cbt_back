@@ -1,0 +1,137 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li><a href="{{'tours/index'|page}}">Tours</a></li>
+            <li><a href="/tours/c/{{category.slug}}">{{category.title}}</a></li>
+            <li>{{tour.name}}</li>
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="container">
+
+      
+      <div class="gallery-detail">
+        <div class="f-carousel" id="gallery-detail-js">
+          
+          {% for image in tour.gallery %}
+              <div class="f-carousel__slide" data-thumb-src="{{ image.path | resize(100, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}"><img alt="" data-lazy-src="{{ image.path | resize(1250, auto, { mode: 'crop', quality: '80', extension: 'webp' }) }}"></div>
+          {% endfor %}
+          
+        </div>
+      </div>
+
+        
+        <div class="title-wrap">
+            <h2 class="title">{{tour.name}}</h2>
+        </div>
+        <div class="desc-text">
+            <div class="desc-text__wrap">
+                <div class="desc-text__col">
+                    {{tour.desc|raw}}
+                    
+                    {% if tour.detail_desc %}
+                      <div class="accordion">
+                        {% for acc in tour.detail_desc %}
+                        <div class="accordion__item">
+                            <div class="accordion__title">
+                                {{acc.acc_title}}<i class="icon-angle-right"></i>
+                            </div>
+                            <div class="accordion__desc-wrap">
+                                <div class="accordion__desc">
+                                    <p>{{acc.acc_desc}}</p>
+                                </div>
+                                <div class="accordion__desc-img">
+                                    {% for galleryDay in acc.acc_gallery %}
+                                        
+                                    <a href="{{galleryDay.img | media | resize(1300, auto, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                        data-fancybox>
+                                        <img src="{{galleryDay.img | media | resize(165, auto, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                            alt="" />
+                                    </a>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {% endif %}
+                    
+                    
+                    {% if tour.map %}
+                      <br>
+                      <br>
+                      
+                      <div class="title-wrap">
+                          <h2 class="title">Map</h2>
+                      </div>
+                      <div id="map">
+                        <iframe src="{{tour.map}}"></iframe>
+                      </div>
+                    {% else %}
+                    {% endif %}
+
+
+                </div>
+                <div class="desc-text__col">
+                    <div class="detail__desc">
+                        <div class="detail__desc-wrap">
+                            
+                            {% if tour.duration == false and tour.difficulty == false and tour.season == false and tour.attraction == false %}
+                              
+                            {% else %}
+                              <div class="detail__title">Short description</div>
+                            {% endif %}
+
+                            <ul>
+                                
+                                {% if tour.duration %}
+
+                                    <li>
+                                        <span>Duration:</span> {{tour.duration}}
+                                    </li>
+                                
+                                {% else %}
+                                {% endif %}
+
+                                {% if tour.difficulty %}
+                                  <li>
+                                    <span>Difficulty level:</span> {{tour.difficulty}}
+                                  </li>
+                                {% else %}
+                                {% endif %}
+
+                                {% if tour.season %}
+                                  <li><span>Best season:</span> {{tour.season}}</li>
+                                {% else %}
+                                {% endif %}
+                                
+                                {% if tour.attraction %}
+                                  <li>
+                                      <span>Attractions:</span> {{tour.attraction}}
+                                  </li>
+                                {% else %}
+                                {% endif %}
+
+                                {% if tour.requirement %}
+                                  <li>
+                                      <span>Requirements:</span> {{tour.requirement}}
+                                  </li>
+                                {% else %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                        {% partial 'form' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+
+        
+    </div>
+</div>

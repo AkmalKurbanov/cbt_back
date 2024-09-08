@@ -1,0 +1,11 @@
+plugin:
+    name: 'cbt.faq::lang.plugin.name'
+    description: 'cbt.faq::lang.plugin.description'
+    author: cbt
+    icon: oc-icon-question-circle
+    homepage: ''
+navigation:
+    Faq:
+        label: FAQ
+        url: cbt/faq/faq
+        icon: icon-question-circle

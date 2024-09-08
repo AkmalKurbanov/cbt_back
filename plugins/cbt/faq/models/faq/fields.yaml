@@ -1,0 +1,14 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        type: text
+    desc:
+        label: Описание
+        size: ''
+        span: right
+        type: richeditor
+    is_active:
+        label: 'СКРЫТЬ / ПОКАЗАТЬ'
+        span: left
+        type: switch

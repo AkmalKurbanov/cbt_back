@@ -1,0 +1,69 @@
+1725715261a:1:{s:7:"faq.htm";a:6:{s:8:"fileName";s:7:"faq.htm";s:7:"content";s:1089:"[builderList faq]
+modelClass = "Cbt\Faq\Models\Faq"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<div class="faq"> 
+  <div class="container"> 
+    <div class="title-wrap">
+      <h2 class="title">FAQ</h2>
+    </div>
+    <div class="accordion">
+                  
+
+          {% for record in records %}
+            {% if record.is_active %}
+              <div class="accordion__item">
+                <div class="accordion__title">{{record.title}}<i class="icon-angle-right"></i>
+                </div>
+                <div class="accordion__desc-wrap">
+                  <div class="accordion__desc accordion__desc_faq">
+                    <p>{{record.desc| raw}}</p>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+            
+            {% endif %}
+      {% else %}
+          {{ noRecordsMessage }}
+      {% endfor %}
+               
+                  
+    </div>
+  </div>
+</div>";s:5:"mtime";i:1716054967;s:6:"markup";s:860:"<div class="faq"> 
+  <div class="container"> 
+    <div class="title-wrap">
+      <h2 class="title">FAQ</h2>
+    </div>
+    <div class="accordion">
+                  
+
+          {% for record in records %}
+            {% if record.is_active %}
+              <div class="accordion__item">
+                <div class="accordion__title">{{record.title}}<i class="icon-angle-right"></i>
+                </div>
+                <div class="accordion__desc-wrap">
+                  <div class="accordion__desc accordion__desc_faq">
+                    <p>{{record.desc| raw}}</p>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+            
+            {% endif %}
+      {% else %}
+          {{ noRecordsMessage }}
+      {% endfor %}
+               
+                  
+    </div>
+  </div>
+</div>";s:4:"code";N;s:15:"builderList faq";a:8:{s:10:"modelClass";s:18:"Cbt\Faq\Models\Faq";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

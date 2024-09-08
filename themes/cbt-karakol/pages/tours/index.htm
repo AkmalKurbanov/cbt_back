@@ -1,0 +1,49 @@
+url = "/tours"
+layout = "default"
+title = "Tours"
+
+[ToursComponent]
+
+[siteSearchInclude]
+
+[viewBag]
+localeTitle[en] = "Tours"
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>All tours</li>
+        </ul>
+    </div>
+</div>
+<div class="kind" style="padding: 30px 0;">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper-container kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                <div class="swiper-slide"><a class="kind__item shine-ef" href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                alt="">
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                                <img src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                    alt=""></div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

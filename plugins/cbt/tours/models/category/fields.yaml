@@ -1,0 +1,51 @@
+fields:
+    title:
+        label: 'НАЗВАНИЕ КАТЕГОРИИ'
+        span: left
+        type: text
+    slug:
+        label: 'URL ЗАПИСИ'
+        span: right
+        type: text
+        preset: title
+    parent:
+        label: 'РОДИТЕЛЬСКАЯ КАТЕГОРИЯ'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '--- РОДИТЕЛЬСКАЯ КАТЕГОРИЯ ---'
+        span: auto
+        type: relation
+    img:
+        label: 'ПРЕВЬЮ КАТЕГОРИИ'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    icon:
+        label: 'СВЕТЛАЯ ИКОНКА'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    iconDark:
+        label: 'ТЕМНАЯ ИКОНКА'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    is_active:
+        label: СКРЫТЬ/ПОКАЗАТЬ
+        'on': ПОКАЗАТЬ
+        'off': СКРЫТЬ
+        span: left
+        type: switch
+        comment: 'В зависимомти от положения "свитчера", катекория либо "активна", либо "неактивна" на сате.'

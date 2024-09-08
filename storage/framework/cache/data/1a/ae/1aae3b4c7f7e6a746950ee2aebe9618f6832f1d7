@@ -1,0 +1,99 @@
+1725757166a:1:{s:8:"rent.htm";a:6:{s:8:"fileName";s:8:"rent.htm";s:7:"content";s:2243:"[builderList rents]
+modelClass = "Cbt\Rent\Models\Rent"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+==
+<div class="img-group img-group--right">
+    <div class="container">
+        <div class="img-group__wrap">
+            <div class="img-group__col">
+                <div class="img-group__images">
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img1.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img2.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img3.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                </div>
+            </div>
+            <div class="img-group__col">
+                <div class="title-wrap">
+
+                    <h2 class="title">
+                        {{'АРЕНДА'|_}}
+                    </h2>
+                    <h3 class="subtitle">
+                        {{'Вы можете также у нас арендовать туристические снаряжения'|_}}
+                    </h3>
+                </div>
+                <div class="icon-list">
+                    {% for record in records %}
+                    <div class="icon-list__item">
+                        <div class="icon-list__icon"><img
+                                src="{{ record.icon.path | resize(58, 58, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+                                alt=""></div>
+                        <div class="icon-list__name">{{record.title}}</div>
+                    </div>
+                    {% endfor %}
+                </div><a class="btn" href="/rent">{{'Арендовать'|_}} </a>
+            </div>
+        </div>
+    </div>
+</div>
+";s:5:"mtime";i:1714739044;s:6:"markup";s:1978:"<div class="img-group img-group--right">
+    <div class="container">
+        <div class="img-group__wrap">
+            <div class="img-group__col">
+                <div class="img-group__images">
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img1.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img2.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                    <div class="img-group__item">
+                        {% component 'contenteditor' file="rent/text-section-img3.htm"  class="" fixture="" tools="image,remove" %}
+                    </div>
+
+                </div>
+            </div>
+            <div class="img-group__col">
+                <div class="title-wrap">
+
+                    <h2 class="title">
+                        {{'АРЕНДА'|_}}
+                    </h2>
+                    <h3 class="subtitle">
+                        {{'Вы можете также у нас арендовать туристические снаряжения'|_}}
+                    </h3>
+                </div>
+                <div class="icon-list">
+                    {% for record in records %}
+                    <div class="icon-list__item">
+                        <div class="icon-list__icon"><img
+                                src="{{ record.icon.path | resize(58, 58, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+                                alt=""></div>
+                        <div class="icon-list__name">{{record.title}}</div>
+                    </div>
+                    {% endfor %}
+                </div><a class="btn" href="/rent">{{'Арендовать'|_}} </a>
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:17:"builderList rents";a:9:{s:10:"modelClass";s:20:"Cbt\Rent\Models\Rent";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:1:"6";s:10:"pageNumber";s:11:"{{ :page }}";}}}

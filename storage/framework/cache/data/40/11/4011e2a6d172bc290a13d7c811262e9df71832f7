@@ -1,0 +1,272 @@
+1725876923a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5270:"
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrap">
+
+                <div class="footer__col">
+                    <div class="logo">
+                        <a href="{{ 'home'|page }}">
+                            <img
+                                src="{{ this.theme.logoFooter.path | resize(185, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="nav">
+                        {% partial 'site/menu-footer' %}
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">We are in social</h3>
+                    <div class="social social--white">
+                        <ul>
+                            {% for item in this.theme.social %}
+                            <li>
+                                <a href="{{item.url}}" target="_blank">
+                                    <i class="{{item.awesome_icon}}"></i>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contacts</h3>
+                    <div class="list-contacts">
+                        <ul>
+                            <li><span><i class="icon-marker"></i></span>
+                                {% for item in this.theme.addressRepeater %}
+                                <div>
+                                    {{item.address|raw}}
+                                </div>
+                                {%endfor%}
+                            </li>
+
+                            <li>
+                                <span><i class="icon-envelope"></i></span>
+                                {% for item in this.theme.emailRepeater %}
+                                <div>
+                                    <a href="tel:{{item.email}}">{{item.email}}</a>
+                                </div>
+                                {%endfor%}
+                            </li>
+
+                            <li>
+                                <span>
+                                    <i class="icon-mobile"></i>
+                                </span>
+                                {% for item in this.theme.phoneRepeater %}
+                                <div>
+                                    <a href="tel:{{item.phone}}">{{item.phone}}
+                                        <span class="messenger">
+                                            <i class="{{item.awesome_icon}}"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                {%endfor%}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Copyright {{ 'now' | date('Y') }} {{this.theme.name}} All rights reserved </p>
+    </div>
+
+</footer>
+
+<script src="{{ ['assets/app.min.js']|theme }}"></script>
+
+
+{# {% if this.locale == 'ru' %}
+<script>
+
+    /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+    /* Written by Andrew Stromnov (stromnov@gmail.com). */
+    ( function( factory ) {
+        "use strict";
+
+        if ( typeof define === "function" && define.amd ) {
+
+            // AMD. Register as an anonymous module.
+            define( [ "../widgets/datepicker" ], factory );
+        } else {
+
+            // Browser globals
+            factory( jQuery.datepicker );
+        }
+    } )( function( datepicker ) {
+    "use strict";
+
+
+
+    datepicker.regional.ru = {
+        closeText: "Закрыть",
+        prevText: "Пред",
+        nextText: "След",
+        currentText: "Сегодня",
+        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+        "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+        dayNames: [ "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" ],
+        dayNamesShort: [ "вск", "пнд", "втр", "срд", "чтв", "птн", "сбт" ],
+        dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+        weekHeader: "Нед",
+        dateFormat: "dd.M.yy",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults( datepicker.regional.ru );
+
+    return datepicker.regional.ru;
+
+    } );
+
+
+
+</script>
+{% else %}
+{% endif %} #}
+
+{% framework extras turbo %}
+{% scripts %}";s:5:"mtime";i:1725789216;s:6:"markup";s:5268:"<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrap">
+
+                <div class="footer__col">
+                    <div class="logo">
+                        <a href="{{ 'home'|page }}">
+                            <img
+                                src="{{ this.theme.logoFooter.path | resize(185, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="nav">
+                        {% partial 'site/menu-footer' %}
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">We are in social</h3>
+                    <div class="social social--white">
+                        <ul>
+                            {% for item in this.theme.social %}
+                            <li>
+                                <a href="{{item.url}}" target="_blank">
+                                    <i class="{{item.awesome_icon}}"></i>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contacts</h3>
+                    <div class="list-contacts">
+                        <ul>
+                            <li><span><i class="icon-marker"></i></span>
+                                {% for item in this.theme.addressRepeater %}
+                                <div>
+                                    {{item.address|raw}}
+                                </div>
+                                {%endfor%}
+                            </li>
+
+                            <li>
+                                <span><i class="icon-envelope"></i></span>
+                                {% for item in this.theme.emailRepeater %}
+                                <div>
+                                    <a href="tel:{{item.email}}">{{item.email}}</a>
+                                </div>
+                                {%endfor%}
+                            </li>
+
+                            <li>
+                                <span>
+                                    <i class="icon-mobile"></i>
+                                </span>
+                                {% for item in this.theme.phoneRepeater %}
+                                <div>
+                                    <a href="tel:{{item.phone}}">{{item.phone}}
+                                        <span class="messenger">
+                                            <i class="{{item.awesome_icon}}"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                {%endfor%}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Copyright {{ 'now' | date('Y') }} {{this.theme.name}} All rights reserved </p>
+    </div>
+
+</footer>
+
+<script src="{{ ['assets/app.min.js']|theme }}"></script>
+
+
+{# {% if this.locale == 'ru' %}
+<script>
+
+    /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+    /* Written by Andrew Stromnov (stromnov@gmail.com). */
+    ( function( factory ) {
+        "use strict";
+
+        if ( typeof define === "function" && define.amd ) {
+
+            // AMD. Register as an anonymous module.
+            define( [ "../widgets/datepicker" ], factory );
+        } else {
+
+            // Browser globals
+            factory( jQuery.datepicker );
+        }
+    } )( function( datepicker ) {
+    "use strict";
+
+
+
+    datepicker.regional.ru = {
+        closeText: "Закрыть",
+        prevText: "Пред",
+        nextText: "След",
+        currentText: "Сегодня",
+        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+        "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+        dayNames: [ "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" ],
+        dayNamesShort: [ "вск", "пнд", "втр", "срд", "чтв", "птн", "сбт" ],
+        dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+        weekHeader: "Нед",
+        dateFormat: "dd.M.yy",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "" };
+    datepicker.setDefaults( datepicker.regional.ru );
+
+    return datepicker.regional.ru;
+
+    } );
+
+
+
+</script>
+{% else %}
+{% endif %} #}
+
+{% framework extras turbo %}
+{% scripts %}";s:4:"code";N;}}

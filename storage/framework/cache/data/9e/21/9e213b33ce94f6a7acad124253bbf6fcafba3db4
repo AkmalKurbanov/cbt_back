@@ -1,0 +1,91 @@
+1725797757a:1:{s:14:"kind-tours.htm";a:6:{s:8:"fileName";s:14:"kind-tours.htm";s:7:"content";s:2060:"[ToursComponent]
+==
+<div class="kind">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                {{parent_id}}
+                <div class="swiper-slide">
+                <a class="kind__item shine-ef"
+                        href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+
+                          {% if item.img.path  %}
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                            {% else %}
+                            <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                          {% endif %}
+
+
+                            
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                              {% if item.icon.path  %}
+                                <img src="{{item.icon.path | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                                {% else %}
+                                <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                              {% endif %}
+                              
+                            </div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1716191643;s:6:"markup";s:2040:"<div class="kind">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                {{parent_id}}
+                <div class="swiper-slide">
+                <a class="kind__item shine-ef"
+                        href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+
+                          {% if item.img.path  %}
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                            {% else %}
+                            <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                          {% endif %}
+
+
+                            
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                              {% if item.icon.path  %}
+                                <img src="{{item.icon.path | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' })}}" alt="">
+                                {% else %}
+                                <img src="{{ '/themes/cbt-karakol/assets/images/default-post-white.png' | resize(70, 70, { mode: 'crop', quality: '80', extension: 'webp' }) }}" alt="">
+                              {% endif %}
+                              
+                            </div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:14:"ToursComponent";a:0:{}}}

@@ -1,0 +1,57 @@
+#genericForm_forms_flash {
+  margin-bottom: 10px;
+}
+.alert {
+  padding: 20px 10px;
+  position: relative;
+}
+.alert h4{
+  margin-bottom: 10px;
+}
+.alert ul li:last-child{
+  margin-bottom: 0;
+}
+.alert p{
+  color: white;
+}
+.alert p:last-child{
+  margin: 0;
+}
+.alert .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+}
+
+.alert button {
+  top: 10px !important;
+  right: 10px !important;
+}
+.alert button span {
+  display: none;
+}
+
+.iti__country {
+  margin: 0 !important;
+}
+
+.fancybox-is-closing {
+  pointer-events: none;
+}
+
+.input-wrap #uploadForm_forms_flash,
+.detail #uploadForm_forms_flash {
+  width: 100%;
+}
+.alert-danger {
+  border-radius: 7px;
+  background-color: rgba(255, 0, 0, 0.226);
+}
+
+.alert-success {
+  border-radius: 7px;
+  background-color: rgba(11, 250, 11, 0.432);
+}
+

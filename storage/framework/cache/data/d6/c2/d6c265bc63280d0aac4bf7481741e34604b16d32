@@ -1,0 +1,1 @@
+1718462326a:1:{s:7:"columns";a:2:{s:5:"title";a:2:{s:5:"label";s:35:"НАЗВАНИЕ КАТЕГОРИИ";s:4:"type";s:4:"text";}s:10:"tury_count";a:4:{s:5:"label";s:10:"ТУРОВ";s:8:"relation";s:4:"tury";s:13:"relationCount";b:1;s:4:"type";s:6:"number";}}}

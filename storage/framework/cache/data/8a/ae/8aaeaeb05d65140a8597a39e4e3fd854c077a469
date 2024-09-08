@@ -1,0 +1,160 @@
+1725876922a:1:{s:20:"site/menu-header.htm";a:7:{s:8:"fileName";s:20:"site/menu-header.htm";s:7:"content";s:2986:"[staticMenu]
+code = "menu-header"
+
+[ToursComponent]
+==
+
+{# <ul>
+  
+  <li class=" {% if this.page.url == '/' %} active {% else %} {% endif %}">
+    <a href="{{'home'| page}}">
+      {% if this.locale == 'ru' %} Главная {% else %} Home {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/tours' %} active {% else %} {% endif %}">
+    <a href="{{'tours/index'| page}}">
+      {% if this.locale == 'ru' %} Туры {% else %} Tours {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/rent' %} active {% else %} {% endif %}">
+    <a href="{{'rent'| page}}">
+      {% if this.locale == 'ru' %} Аренда {% else %} Rent {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/blog' %} active {% else %} {% endif %}">
+    <a href="{{'blog/index'| page}}">
+      {% if this.locale == 'ru' %} Блог {% else %} Blog {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/video/:page?' or this.page.url == '/photo/:page?' %} active {% else %} {% endif %}">
+    <a href="#" style="pointer-events: none;">
+      {% if this.locale == 'ru' %} Медиа {% else %} Media  {% endif %}
+    </a>
+    <ul>
+      <li>
+        <a href="{{'video'| page}}">
+          {% if this.locale == 'ru' %} Видео {% else %} Video {% endif %}
+        </a>
+      </li>
+      <li>
+        <a href="{{'photo'| page}}"> {% if this.locale == 'ru' %} Фото {% else %} Photo {% endif %} </a>
+      </li>
+    </ul>
+  </li>
+  <li class="{% if this.page.url == '/contacts' %} active {% else %} {% endif %}">
+    <a href="{{'contacts'| page}}"> {% if this.locale == 'ru' %} Контакты {% else %} Contacts {% endif %} </a>
+  </li>
+  {% component 'staticMenu' %}
+</ul> #}
+
+
+<ul>
+  
+  <li class=" {% if this.page.url == '/' %} active {% else %} {% endif %}">
+    <a href="{{'home'| page}}"> Home </a>
+  </li>
+  <li class="{% if this.page.url == '/tours' %} active {% else %} {% endif %}">
+    <a href="{{'tours/index'| page}}"> Tours </a>
+  </li>
+  {# <li class="{% if this.page.url == '/rent' %} active {% else %} {% endif %}">
+    <a href="{{'rent'| page}}"> Rent </a>
+  </li> #}
+  <li class="{% if this.page.url == '/blog' %} active {% else %} {% endif %}">
+    <a href="{{'blog/index'| page}}"> Blog </a>
+  </li>
+  <li class="{% if this.page.url == '/video/:page?' or this.page.url == '/photo/:page?' %} active {% else %} {% endif %}">
+    <a href="#" style="pointer-events: none;"> Media </a>
+    <ul>
+      <li>
+        <a href="{{'video'| page}}"> Video </a>
+      </li>
+      <li>
+        <a href="{{'photo'| page}}"> Photo </a>
+      </li>
+    </ul>
+  </li>
+  <li class="{% if this.page.url == '/contacts' %} active {% else %} {% endif %}">
+    <a href="{{'contacts'| page}}"> Contacts </a>
+  </li>
+  <li class="{% if this.page.url == '/faq' %} active {% else %} {% endif %}">
+    <a href="{{'faq'| page}}"> FAQ </a>
+  </li>
+  {% component 'staticMenu' %}
+</ul>
+";s:5:"mtime";i:1725789216;s:6:"markup";s:2922:"{# <ul>
+  
+  <li class=" {% if this.page.url == '/' %} active {% else %} {% endif %}">
+    <a href="{{'home'| page}}">
+      {% if this.locale == 'ru' %} Главная {% else %} Home {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/tours' %} active {% else %} {% endif %}">
+    <a href="{{'tours/index'| page}}">
+      {% if this.locale == 'ru' %} Туры {% else %} Tours {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/rent' %} active {% else %} {% endif %}">
+    <a href="{{'rent'| page}}">
+      {% if this.locale == 'ru' %} Аренда {% else %} Rent {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/blog' %} active {% else %} {% endif %}">
+    <a href="{{'blog/index'| page}}">
+      {% if this.locale == 'ru' %} Блог {% else %} Blog {% endif %}
+    </a>
+  </li>
+  <li class="{% if this.page.url == '/video/:page?' or this.page.url == '/photo/:page?' %} active {% else %} {% endif %}">
+    <a href="#" style="pointer-events: none;">
+      {% if this.locale == 'ru' %} Медиа {% else %} Media  {% endif %}
+    </a>
+    <ul>
+      <li>
+        <a href="{{'video'| page}}">
+          {% if this.locale == 'ru' %} Видео {% else %} Video {% endif %}
+        </a>
+      </li>
+      <li>
+        <a href="{{'photo'| page}}"> {% if this.locale == 'ru' %} Фото {% else %} Photo {% endif %} </a>
+      </li>
+    </ul>
+  </li>
+  <li class="{% if this.page.url == '/contacts' %} active {% else %} {% endif %}">
+    <a href="{{'contacts'| page}}"> {% if this.locale == 'ru' %} Контакты {% else %} Contacts {% endif %} </a>
+  </li>
+  {% component 'staticMenu' %}
+</ul> #}
+
+
+<ul>
+  
+  <li class=" {% if this.page.url == '/' %} active {% else %} {% endif %}">
+    <a href="{{'home'| page}}"> Home </a>
+  </li>
+  <li class="{% if this.page.url == '/tours' %} active {% else %} {% endif %}">
+    <a href="{{'tours/index'| page}}"> Tours </a>
+  </li>
+  {# <li class="{% if this.page.url == '/rent' %} active {% else %} {% endif %}">
+    <a href="{{'rent'| page}}"> Rent </a>
+  </li> #}
+  <li class="{% if this.page.url == '/blog' %} active {% else %} {% endif %}">
+    <a href="{{'blog/index'| page}}"> Blog </a>
+  </li>
+  <li class="{% if this.page.url == '/video/:page?' or this.page.url == '/photo/:page?' %} active {% else %} {% endif %}">
+    <a href="#" style="pointer-events: none;"> Media </a>
+    <ul>
+      <li>
+        <a href="{{'video'| page}}"> Video </a>
+      </li>
+      <li>
+        <a href="{{'photo'| page}}"> Photo </a>
+      </li>
+    </ul>
+  </li>
+  <li class="{% if this.page.url == '/contacts' %} active {% else %} {% endif %}">
+    <a href="{{'contacts'| page}}"> Contacts </a>
+  </li>
+  <li class="{% if this.page.url == '/faq' %} active {% else %} {% endif %}">
+    <a href="{{'faq'| page}}"> FAQ </a>
+  </li>
+  {% component 'staticMenu' %}
+</ul>";s:4:"code";N;s:10:"staticMenu";a:1:{s:4:"code";s:11:"menu-header";}s:14:"ToursComponent";a:0:{}}}

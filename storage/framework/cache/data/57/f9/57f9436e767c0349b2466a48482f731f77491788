@@ -1,0 +1,7 @@
+1725793029a:1:{s:7:"faq.htm";a:10:{s:8:"fileName";s:7:"faq.htm";s:7:"content";s:118:"title = "Faq"
+layout = "default"
+url = "/faq"
+meta_title = "Faq"
+meta_description = "Faq"
+==
+{% partial 'faq' %}";s:5:"mtime";i:1715717496;s:6:"markup";s:19:"{% partial 'faq' %}";s:4:"code";N;s:5:"title";s:3:"Faq";s:6:"layout";s:7:"default";s:3:"url";s:4:"/faq";s:10:"meta_title";s:3:"Faq";s:16:"meta_description";s:3:"Faq";}}

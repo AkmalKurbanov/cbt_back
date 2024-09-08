@@ -1,0 +1,75 @@
+1725876918a:1:{s:8:"home.htm";a:20:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1392:"url = "/"
+layout = "default"
+title = "Home"
+meta_title = "Home"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsMetaTitle = "Home"
+seoOptionsMetaDescription = "Home"
+
+[viewBag]
+localeUrl[en] = "/"
+localeTitle[en] = "Main"
+localeMeta_title[en] = "Main"
+
+[sitePicker]
+
+[siteSearchInclude]
+
+[genericForm]
+group = "Бронирование на \"Главной\""
+rules[email] = "required|email"
+messages_success = "Your form has been sent successfully!"
+messages_errors = "There are errors in your application."
+mail_enabled = 1
+mail_subject = "CBT Бронирование на \"Главной\""
+mail_recipients[mongu.karakol@gmail.com] = "CBT"
+mail_resp_field = "mongu.karakol@gmail.com"
+mail_resp_from = "mongu.karakol@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+{% set latestPosts = blog.limit(3).get %}
+
+
+{% partial 'kind-tours' %}
+
+{% partial 'advantages' %}
+{# {% partial 'about' %} #}
+
+{% partial 'popular-tours' %}
+
+{% partial 'events' %}
+
+{% partial 'pass-form' %}
+
+
+{# {% partial 'rent' %} #}
+
+{% partial 'site/booking-popup' %}";s:5:"mtime";i:1725789216;s:6:"markup";s:290:"{% set latestPosts = blog.limit(3).get %}
+
+
+{% partial 'kind-tours' %}
+
+{% partial 'advantages' %}
+{# {% partial 'about' %} #}
+
+{% partial 'popular-tours' %}
+
+{% partial 'events' %}
+
+{% partial 'pass-form' %}
+
+
+{# {% partial 'rent' %} #}
+
+{% partial 'site/booking-popup' %}";s:4:"code";N;s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:5:"title";s:4:"Home";s:10:"meta_title";s:4:"Home";s:26:"seoOptionsEnabledInSitemap";s:1:"1";s:22:"seoOptionsUseUpdatedAt";s:1:"1";s:20:"seoOptionsRobotIndex";s:5:"index";s:21:"seoOptionsRobotFollow";s:6:"follow";s:16:"seoOptionsOgCard";s:19:"summary_large_image";s:19:"seoOptionsMetaTitle";s:4:"Home";s:25:"seoOptionsMetaDescription";s:4:"Home";s:7:"viewBag";a:3:{s:9:"localeUrl";a:1:{s:2:"en";s:1:"/";}s:11:"localeTitle";a:1:{s:2:"en";s:4:"Main";}s:16:"localeMeta_title";a:1:{s:2:"en";s:4:"Main";}}s:10:"sitePicker";a:0:{}s:17:"siteSearchInclude";a:0:{}s:11:"genericForm";a:17:{s:5:"group";s:46:"Бронирование на "Главной"";s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:16:"messages_success";s:37:"Your form has been sent successfully!";s:15:"messages_errors";s:37:"There are errors in your application.";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:50:"CBT Бронирование на "Главной"";s:15:"mail_recipients";a:1:{s:23:"mongu.karakol@gmail.com";s:3:"CBT";}s:15:"mail_resp_field";s:23:"mongu.karakol@gmail.com";s:14:"mail_resp_from";s:23:"mongu.karakol@gmail.com";s:10:"reset_form";s:1:"1";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

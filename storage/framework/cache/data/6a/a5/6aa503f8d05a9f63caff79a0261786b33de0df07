@@ -1,0 +1,327 @@
+1725854294a:1:{s:13:"site/hero.htm";a:5:{s:8:"fileName";s:13:"site/hero.htm";s:7:"content";s:6931:"
+<div class="hero">
+    <div class="hero-mobile-bg">
+        <img src="{{ 'assets/images/hero-mobile-bg.webp'|theme }}"
+            alt="">
+
+    </div>
+    <header class="header header--transparent">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="{{ 'home'|page }}" class="logo">
+                  <img src="{{ this.theme.logoHeaderMain.path | resize(125, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                </a>
+                
+                <div class=" header__left-col">
+
+                    <div class="nav">
+                        {% partial  'site/menu-header' %}
+                        <div class="social">
+                            <ul>
+                                {% for item in this.theme.social %}
+                                <li>
+                                    <a href="{{item.url}}" target="_blank">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </a>
+                                </li>
+                                {%endfor%}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social social--white">
+                        <ul>
+                            {% for item in this.theme.social %}
+                            <li>
+                                <a href="{{item.url}}" target="_blank">
+                                    <i class="{{item.awesome_icon}}"></i>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <div class="search search-js">
+                        <div class="search__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875V15.875Z"
+                                    fill="#fff"></path>
+                                <clippath id="clip0_77_1126">
+                                    <rect width="24" height="24"></rect>
+                                </clippath>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                    {# {% partial  'site/lang' %} #}
+
+                    {# <div class="lang main-page-lang">
+
+
+                        <div class="lang">
+                            <div class="lang__selected" data-lang="{{this.site.locale}}">{{this.site.locale}}</div>
+                            <div class="lang__dropdown">
+                                <div class="lang__item"><a href="/ru{{ this.page.url }}" data-lang="ru">ru</a>
+                                </div>
+                                <div class="lang__item"><a href="/en{{ this.page.url }}" data-lang="en">en</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div> #}
+                    <div class="hamburger"> <span></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% partial 'search-form' %}
+
+
+    <div class="swiper hero-js">
+        <div class="swiper-wrapper">
+
+            {% for item in this.theme.heroSlider %}
+            <div class="swiper-slide">
+                <div class="hero__item"
+                    style="background-image: url('{{item.heroSlide | media | resize(1920, 1000, { mode: 'crop', quality: '80', extension: 'webp' })}}')">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="swiper hero-title-js">
+            <div class="swiper-wrapper">
+              
+            {% for item in this.theme.heroSlider %}
+            
+              <div class="swiper-slide">  
+                <div class="hero__title">{{item.heroTitle}}</div>
+                <div class="hero__subtitle">{{item.heroSubTitle}}</div>
+              </div>
+
+            {% endfor %}  
+            </div>
+          </div>
+
+        {# <div class="hero__title">{{this.theme.mainTitle | raw}}</div> #}
+
+        <div class="booking">
+            <h2 class="booking__title">Booking</h2>
+            <div class="booking__wrap">
+                
+
+
+
+                    <div class="booking__item-wrap">
+                        <div class="booking__item booking__item--date">
+                            <div class="booking__item-icon"> <i class="icon-calendar"></i></div>
+                            <div>
+                                
+                                <div class="booking__date-wrap">
+                                    <div>
+                                        <label for="start-date" class="booking__item-title">Date from</label>
+                                        <input id="start-date" type="text" autocomplete="off" name="from" placeholder="{{ 'now' | date('d M Y') }}">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="end-date" class="booking__item-title">Date to</label>
+                                        <input id="end-date" type="text" autocomplete="off" name="to" disabled>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking__item">
+                            <div class="booking__item-icon"> <i class="icon-user2"></i></div>
+                            <div>
+                                <div class="booking__item-title">guests</div>
+                                <div class="person-count">
+                                    <input type="number" value="2" min="1"><span>persons</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking__item">
+                          <button class="btn booking-js booking-hero-js" disabled>Booking</button>
+                        </div>
+                    </div>
+
+
+
+
+               
+            </div>
+        </div>
+
+        {% partial 'recomend-tours' %}
+
+
+    </div>
+</div>
+";s:5:"mtime";i:1715786068;s:6:"markup";s:6927:"<div class="hero">
+    <div class="hero-mobile-bg">
+        <img src="{{ 'assets/images/hero-mobile-bg.webp'|theme }}"
+            alt="">
+
+    </div>
+    <header class="header header--transparent">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="{{ 'home'|page }}" class="logo">
+                  <img src="{{ this.theme.logoHeaderMain.path | resize(125, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}">
+                </a>
+                
+                <div class=" header__left-col">
+
+                    <div class="nav">
+                        {% partial  'site/menu-header' %}
+                        <div class="social">
+                            <ul>
+                                {% for item in this.theme.social %}
+                                <li>
+                                    <a href="{{item.url}}" target="_blank">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </a>
+                                </li>
+                                {%endfor%}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social social--white">
+                        <ul>
+                            {% for item in this.theme.social %}
+                            <li>
+                                <a href="{{item.url}}" target="_blank">
+                                    <i class="{{item.awesome_icon}}"></i>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <div class="search search-js">
+                        <div class="search__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875V15.875Z"
+                                    fill="#fff"></path>
+                                <clippath id="clip0_77_1126">
+                                    <rect width="24" height="24"></rect>
+                                </clippath>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                    {# {% partial  'site/lang' %} #}
+
+                    {# <div class="lang main-page-lang">
+
+
+                        <div class="lang">
+                            <div class="lang__selected" data-lang="{{this.site.locale}}">{{this.site.locale}}</div>
+                            <div class="lang__dropdown">
+                                <div class="lang__item"><a href="/ru{{ this.page.url }}" data-lang="ru">ru</a>
+                                </div>
+                                <div class="lang__item"><a href="/en{{ this.page.url }}" data-lang="en">en</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div> #}
+                    <div class="hamburger"> <span></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% partial 'search-form' %}
+
+
+    <div class="swiper hero-js">
+        <div class="swiper-wrapper">
+
+            {% for item in this.theme.heroSlider %}
+            <div class="swiper-slide">
+                <div class="hero__item"
+                    style="background-image: url('{{item.heroSlide | media | resize(1920, 1000, { mode: 'crop', quality: '80', extension: 'webp' })}}')">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="swiper hero-title-js">
+            <div class="swiper-wrapper">
+              
+            {% for item in this.theme.heroSlider %}
+            
+              <div class="swiper-slide">  
+                <div class="hero__title">{{item.heroTitle}}</div>
+                <div class="hero__subtitle">{{item.heroSubTitle}}</div>
+              </div>
+
+            {% endfor %}  
+            </div>
+          </div>
+
+        {# <div class="hero__title">{{this.theme.mainTitle | raw}}</div> #}
+
+        <div class="booking">
+            <h2 class="booking__title">Booking</h2>
+            <div class="booking__wrap">
+                
+
+
+
+                    <div class="booking__item-wrap">
+                        <div class="booking__item booking__item--date">
+                            <div class="booking__item-icon"> <i class="icon-calendar"></i></div>
+                            <div>
+                                
+                                <div class="booking__date-wrap">
+                                    <div>
+                                        <label for="start-date" class="booking__item-title">Date from</label>
+                                        <input id="start-date" type="text" autocomplete="off" name="from" placeholder="{{ 'now' | date('d M Y') }}">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="end-date" class="booking__item-title">Date to</label>
+                                        <input id="end-date" type="text" autocomplete="off" name="to" disabled>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking__item">
+                            <div class="booking__item-icon"> <i class="icon-user2"></i></div>
+                            <div>
+                                <div class="booking__item-title">guests</div>
+                                <div class="person-count">
+                                    <input type="number" value="2" min="1"><span>persons</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking__item">
+                          <button class="btn booking-js booking-hero-js" disabled>Booking</button>
+                        </div>
+                    </div>
+
+
+
+
+               
+            </div>
+        </div>
+
+        {% partial 'recomend-tours' %}
+
+
+    </div>
+</div>";s:4:"code";N;}}

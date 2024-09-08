@@ -1,0 +1,9 @@
+columns:
+  title:
+      label: 'НАЗВАНИЕ КАТЕГОРИИ'
+      type: text
+  tury_count:
+    label: ТУРОВ
+    relation: tury
+    relationCount: true
+    type: number

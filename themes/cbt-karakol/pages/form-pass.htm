@@ -1,0 +1,214 @@
+url = "/form-pass"
+layout = "default"
+title = "Пограничный пропуск"
+meta_title = "asdas"
+meta_description = "dadasdsa"
+
+[viewBag]
+localeUrl[en] = "/form-pass"
+localeTitle[en] = "Border pass"
+
+[uploadForm]
+group = "Пограничный пропуск"
+rules[email] = "required|email"
+messages_success = "Your form has been successfully submitted!"
+messages_errors = "There are errors in your application."
+mail_enabled = 1
+mail_subject = "CBT Пограничный пропуск"
+mail_recipients[mongu.karakol@gmail.com] = "CBT"
+mail_resp_field = "mongu.karakol@gmail.com"
+mail_resp_from = "mongu.karakol@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+uploader_enable = 1
+uploader_multi = 1
+placeholderText = "Click or drag files to upload."
+removeText = "Are you sure?"
+maxSize = 5
+fileTypes[] = "jpg"
+fileTypes[] = "jpeg"
+fileTypes[] = "bmp"
+fileTypes[] = "png"
+fileTypes[] = "webp"
+fileTypes[] = "gif"
+fileTypes[] = "svg"
+fileTypes[] = "js"
+fileTypes[] = "map"
+fileTypes[] = "ico"
+fileTypes[] = "css"
+fileTypes[] = "less"
+fileTypes[] = "scss"
+fileTypes[] = "ics"
+fileTypes[] = "odt"
+fileTypes[] = "doc"
+fileTypes[] = "docx"
+fileTypes[] = "ppt"
+fileTypes[] = "pptx"
+fileTypes[] = "pdf"
+fileTypes[] = "swf"
+fileTypes[] = "txt"
+fileTypes[] = "ods"
+fileTypes[] = "xls"
+fileTypes[] = "xlsx"
+fileTypes[] = "eot"
+fileTypes[] = "woff"
+fileTypes[] = "woff2"
+fileTypes[] = "ttf"
+fileTypes[] = "flv"
+fileTypes[] = "wmv"
+fileTypes[] = "mp3"
+fileTypes[] = "ogg"
+fileTypes[] = "wav"
+fileTypes[] = "avi"
+fileTypes[] = "mov"
+fileTypes[] = "mp4"
+fileTypes[] = "mpeg"
+fileTypes[] = "webm"
+fileTypes[] = "mkv"
+fileTypes[] = "rar"
+fileTypes[] = "zip"
+
+[siteSearchInclude]
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>Border pass</li>
+        </ul>
+    </div>
+</div>
+<div class="booking-form">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">BORDER PASS</h2>
+        </div>
+        <div class="booking-form__wrap">
+            <div class="booking-form__col">
+                <p>Here you can reserve the most suitable date for your tour.</p><br>
+                <p>To do this, we need information from the sender.</p>
+
+                {{ form_ajax(uploadForm ~ '::onFormSubmit') }}
+
+
+
+                <div class="input-wrap">
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Имя">
+
+                    </div>
+                    <div class="input input_phone">
+                        <label for="phone">Phone number</label>
+                        <input class="phone-js" name="phone" type="tel" placeholder id="phone">
+                        <div class="output-success">The number is valid!</div>
+                        <div class="output-error">Wrong number. Try again.</div>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="input">
+                        <label for="where">Where is the pass needed?</label>
+                        <input type="text" id="where" name="Куда нужен пропуск">
+                    </div>
+                    
+                    <div class="input input_double">
+                      <div class="input">
+                        <label for="start-date">Date from</label>
+                        <span class="date-wrapper">
+                          <input id="start-date" type="text" autocomplete="off" name="Дата c" placeholder="{{ 'now' | date('d M Y') }}">
+                        </span>
+                      </div>
+                      <div class="input">
+                        <label for="end-date">Date to</label>
+                        <span class="date-wrapper">
+                          <input id="end-date" type="text" autocomplete="off" name="Дата по" disabled>
+                          </span>
+                      </div>
+                    </div>
+
+                    <div id="{{ uploadForm }}_forms_flash"></div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <h4>Upload a photo of your passport.</h4>
+
+                    {% partial '@file-upload' %}
+              
+
+                </div>
+
+                {# <div class="form-group">
+                    {% partial '@recaptcha' %}
+                </div> #}
+
+                <div class="booking-form__btn">
+                    <button id="simpleContactSubmitButton" type="submit" class="btn">Send</button>
+                </div>
+
+                {{ form_close() }}
+
+            </div>
+            <div class="booking-form__col">
+                <div class="list-contacts list-contacts--dark">
+                    <ul>
+                        <li>
+                            <span><i class="icon-user2"></i></span>
+                            <div>
+                                <p>{{this.theme.contactPerson}}</p>
+                            </div>
+                        </li>
+                        <li><span><i class="icon-marker"></i></span>
+                            {% for item in this.theme.addressRepeater %}
+                            <div>
+                                {{item.address|raw}}
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span><i class="icon-envelope"></i></span>
+                            {% for item in this.theme.emailRepeater %}
+                            <div>
+                                <a href="tel:{{item.email}}">{{item.email}}</a>
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon-mobile"></i>
+                            </span>
+                            {% for item in this.theme.phoneRepeater %}
+                            <div>
+                                <a href="tel:{{item.phone}}">{{item.phone}}
+                                    <span class="messenger">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            {%endfor%}
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup" id="feedbackModal">
+    <div class="popup__window">
+        <div class="close"></div>
+        <h2>Thank you, your application has been accepted!</h2>
+        <img src="{{'assets/img/popup.jpg'|theme | resize(300, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+            alt="">
+        <h2>We will contact you shortly.</h2>
+    </div>
+</div>

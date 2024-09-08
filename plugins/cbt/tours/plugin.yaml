@@ -1,0 +1,20 @@
+plugin:
+    name: 'cbt.tours::lang.plugin.name'
+    description: 'Категории туров и записи'
+    author: Cbt
+    icon: oc-icon-area-chart
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: ТУРЫ
+        url: /
+        icon: icon-code-fork
+        sideMenu:
+            side-menu-item:
+                label: КАТЕГОРИИ
+                url: cbt/tours/categories
+                icon: icon-sitemap
+            side-menu-item2:
+                label: ТУРЫ
+                url: cbt/tours/tury
+                icon: icon-compass

@@ -1,0 +1,25 @@
+1725876923a:1:{s:16:"menu-footer.yaml";a:7:{s:8:"fileName";s:16:"menu-footer.yaml";s:7:"content";s:494:"items:
+    -
+        title: About
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: about
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Home
+        type: cms-page
+        code: ''
+        reference: home
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Меню подвала'
+";s:5:"mtime";i:1725789216;s:6:"markup";N;s:4:"code";N;s:4:"name";N;s:5:"items";a:0:{}}}

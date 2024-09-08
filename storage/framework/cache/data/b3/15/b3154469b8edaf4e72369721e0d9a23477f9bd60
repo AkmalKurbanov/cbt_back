@@ -1,0 +1,130 @@
+1725876918a:1:{s:9:"video.htm";a:11:{s:8:"fileName";s:9:"video.htm";s:7:"content";s:3126:"url = "/video/:page?"
+layout = "default"
+title = "Video"
+
+[builderList builderList2]
+modelClass = "Cbt\Media\Models\Video"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 9
+pageNumber = "{{ :page }}"
+
+[viewBag]
+localeUrl[en] = "/video/:page?"
+localeTitle[en] = "Video"
+
+[siteSearchInclude]
+==
+<div class="media">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">{{this.page.title}}</h2>
+        </div>
+        <div class="media__wrap">
+            {% set records = builderList2.records %}
+            {% set displayColumn = builderList2.displayColumn %}
+            {% set noRecordsMessage = builderList2.noRecordsMessage %}
+            {% set detailsPage = builderList2.detailsPage %}
+            {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+            {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+            {% for record in records %}
+            <div class="media__item">
+                <div class="media__item-img">
+                    <img src="https://img.youtube.com/vi/{{record.link}}/maxresdefault.jpg" alt="">
+                    <div class="media__item-img-effect"><span></span></div>
+                    <div class="media__item-info">
+                        <div class="media__item-name">{{record.title}}</div>
+                        <div class="media__item-desc">{{record.desc}}</div>
+                    </div><a class="playButton" href="https://www.youtube.com/watch?v={{record.link}}" data-fancybox="">
+                        <svg x="0px" y="0px" viewbox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
+                            xml:space="preserve">
+                            <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-miterlimit="10"
+                                points="73.5,62.5 148.5,105.8 73.5,149.1"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if records.lastPage > 1 %}
+        <ul class="pagination">
+            {% if records.currentPage > 1 %}
+            <li class="prev"><a
+                    href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr;
+                </a></li>
+            {% endif %}
+
+            {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+
+            {% if records.lastPage > records.currentPage %}
+            <li class="next"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">
+                    &rarr;</a></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+</div>";s:5:"mtime";i:1725789216;s:6:"markup";s:2696:"<div class="media">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">{{this.page.title}}</h2>
+        </div>
+        <div class="media__wrap">
+            {% set records = builderList2.records %}
+            {% set displayColumn = builderList2.displayColumn %}
+            {% set noRecordsMessage = builderList2.noRecordsMessage %}
+            {% set detailsPage = builderList2.detailsPage %}
+            {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+            {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+            {% for record in records %}
+            <div class="media__item">
+                <div class="media__item-img">
+                    <img src="https://img.youtube.com/vi/{{record.link}}/maxresdefault.jpg" alt="">
+                    <div class="media__item-img-effect"><span></span></div>
+                    <div class="media__item-info">
+                        <div class="media__item-name">{{record.title}}</div>
+                        <div class="media__item-desc">{{record.desc}}</div>
+                    </div><a class="playButton" href="https://www.youtube.com/watch?v={{record.link}}" data-fancybox="">
+                        <svg x="0px" y="0px" viewbox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
+                            xml:space="preserve">
+                            <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-miterlimit="10"
+                                points="73.5,62.5 148.5,105.8 73.5,149.1"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if records.lastPage > 1 %}
+        <ul class="pagination">
+            {% if records.currentPage > 1 %}
+            <li class="prev"><a
+                    href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr;
+                </a></li>
+            {% endif %}
+
+            {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+
+            {% if records.lastPage > records.currentPage %}
+            <li class="next"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">
+                    &rarr;</a></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:13:"/video/:page?";s:6:"layout";s:7:"default";s:5:"title";s:5:"Video";s:24:"builderList builderList2";a:9:{s:10:"modelClass";s:22:"Cbt\Media\Models\Video";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:1:"9";s:10:"pageNumber";s:11:"{{ :page }}";}s:7:"viewBag";a:2:{s:9:"localeUrl";a:1:{s:2:"en";s:13:"/video/:page?";}s:11:"localeTitle";a:1:{s:2:"en";s:5:"Video";}}s:17:"siteSearchInclude";a:0:{}}}

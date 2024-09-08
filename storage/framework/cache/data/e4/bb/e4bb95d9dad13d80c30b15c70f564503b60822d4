@@ -1,0 +1,1 @@
+1718035879a:6:{s:4:"name";s:3:"Faq";s:4:"form";s:32:"$/cbt/faq/models/faq/fields.yaml";s:10:"modelClass";s:18:"Cbt\Faq\Models\Faq";s:15:"defaultRedirect";s:11:"cbt/faq/faq";s:6:"create";a:2:{s:8:"redirect";s:22:"cbt/faq/faq/update/:id";s:13:"redirectClose";s:11:"cbt/faq/faq";}s:6:"update";a:2:{s:8:"redirect";s:11:"cbt/faq/faq";s:13:"redirectClose";s:11:"cbt/faq/faq";}}

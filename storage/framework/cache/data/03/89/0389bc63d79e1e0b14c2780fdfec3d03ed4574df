@@ -1,0 +1,62 @@
+1725876918a:1:{s:7:"404.htm";a:8:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:1138:"url = "/404"
+title = "/404"
+
+[viewBag]
+localeUrl[en] = "/404"
+localeTitle[en] = "/404"
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="not-found">
+                <img class="not-found__lg" src={{ "/assets/images/404.webp" | theme }} alt="">
+                <img class="not-found__sm" src={{ "/assets/images/404-768.webp" | theme }} alt="">
+                <img class="not-found__xs" src={{ "/assets/images/404-575.webp" | theme }} alt="">
+                <div class="not-found__bottom">
+                    <p>{{'Страница не найдена'|_}}</p>
+                    <div class="not-found__btn-wrap"><a class="btn btn--dark"
+                            href="{{ 'home'|page }}">{{'На главную'|_}} </a><a
+                            class="btn btn--dark" href="{{'tours/index'|page}}">{{'Страница туров'|_}}</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>";s:5:"mtime";i:1725789216;s:6:"markup";s:1048:"<!DOCTYPE html>
+<html>
+
+<head>
+    {% partial 'site/meta' %}
+    {% component 'seo' %}
+</head>
+
+<body class="{{ 'page-'~this.page.id }}">
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="not-found">
+                <img class="not-found__lg" src={{ "/assets/images/404.webp" | theme }} alt="">
+                <img class="not-found__sm" src={{ "/assets/images/404-768.webp" | theme }} alt="">
+                <img class="not-found__xs" src={{ "/assets/images/404-575.webp" | theme }} alt="">
+                <div class="not-found__bottom">
+                    <p>{{'Страница не найдена'|_}}</p>
+                    <div class="not-found__btn-wrap"><a class="btn btn--dark"
+                            href="{{ 'home'|page }}">{{'На главную'|_}} </a><a
+                            class="btn btn--dark" href="{{'tours/index'|page}}">{{'Страница туров'|_}}</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>";s:4:"code";N;s:3:"url";s:4:"/404";s:5:"title";s:4:"/404";s:7:"viewBag";a:2:{s:9:"localeUrl";a:1:{s:2:"en";s:4:"/404";}s:11:"localeTitle";a:1:{s:2:"en";s:4:"/404";}}}}

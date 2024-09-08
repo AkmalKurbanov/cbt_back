@@ -1,0 +1,349 @@
+1725876918a:1:{s:13:"form-pass.htm";a:13:{s:8:"fileName";s:13:"form-pass.htm";s:7:"content";s:7270:"url = "/form-pass"
+layout = "default"
+title = "Пограничный пропуск"
+meta_title = "asdas"
+meta_description = "dadasdsa"
+
+[viewBag]
+localeUrl[en] = "/form-pass"
+localeTitle[en] = "Border pass"
+
+[uploadForm]
+group = "Пограничный пропуск"
+rules[email] = "required|email"
+messages_success = "Your form has been successfully submitted!"
+messages_errors = "There are errors in your application."
+mail_enabled = 1
+mail_subject = "CBT Пограничный пропуск"
+mail_recipients[mongu.karakol@gmail.com] = "CBT"
+mail_resp_field = "mongu.karakol@gmail.com"
+mail_resp_from = "mongu.karakol@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+uploader_enable = 1
+uploader_multi = 1
+placeholderText = "Click or drag files to upload."
+removeText = "Are you sure?"
+maxSize = 5
+fileTypes[] = "jpg"
+fileTypes[] = "jpeg"
+fileTypes[] = "bmp"
+fileTypes[] = "png"
+fileTypes[] = "webp"
+fileTypes[] = "gif"
+fileTypes[] = "svg"
+fileTypes[] = "js"
+fileTypes[] = "map"
+fileTypes[] = "ico"
+fileTypes[] = "css"
+fileTypes[] = "less"
+fileTypes[] = "scss"
+fileTypes[] = "ics"
+fileTypes[] = "odt"
+fileTypes[] = "doc"
+fileTypes[] = "docx"
+fileTypes[] = "ppt"
+fileTypes[] = "pptx"
+fileTypes[] = "pdf"
+fileTypes[] = "swf"
+fileTypes[] = "txt"
+fileTypes[] = "ods"
+fileTypes[] = "xls"
+fileTypes[] = "xlsx"
+fileTypes[] = "eot"
+fileTypes[] = "woff"
+fileTypes[] = "woff2"
+fileTypes[] = "ttf"
+fileTypes[] = "flv"
+fileTypes[] = "wmv"
+fileTypes[] = "mp3"
+fileTypes[] = "ogg"
+fileTypes[] = "wav"
+fileTypes[] = "avi"
+fileTypes[] = "mov"
+fileTypes[] = "mp4"
+fileTypes[] = "mpeg"
+fileTypes[] = "webm"
+fileTypes[] = "mkv"
+fileTypes[] = "rar"
+fileTypes[] = "zip"
+
+[siteSearchInclude]
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>Border pass</li>
+        </ul>
+    </div>
+</div>
+<div class="booking-form">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">BORDER PASS</h2>
+        </div>
+        <div class="booking-form__wrap">
+            <div class="booking-form__col">
+                <p>Here you can reserve the most suitable date for your tour.</p><br>
+                <p>To do this, we need information from the sender.</p>
+
+                {{ form_ajax(uploadForm ~ '::onFormSubmit') }}
+
+
+
+                <div class="input-wrap">
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Имя">
+
+                    </div>
+                    <div class="input input_phone">
+                        <label for="phone">Phone number</label>
+                        <input class="phone-js" name="phone" type="tel" placeholder id="phone">
+                        <div class="output-success">The number is valid!</div>
+                        <div class="output-error">Wrong number. Try again.</div>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="input">
+                        <label for="where">Where is the pass needed?</label>
+                        <input type="text" id="where" name="Куда нужен пропуск">
+                    </div>
+                    
+                    <div class="input input_double">
+                      <div class="input">
+                        <label for="start-date">Date from</label>
+                        <span class="date-wrapper">
+                          <input id="start-date" type="text" autocomplete="off" name="Дата c" placeholder="{{ 'now' | date('d M Y') }}">
+                        </span>
+                      </div>
+                      <div class="input">
+                        <label for="end-date">Date to</label>
+                        <span class="date-wrapper">
+                          <input id="end-date" type="text" autocomplete="off" name="Дата по" disabled>
+                          </span>
+                      </div>
+                    </div>
+
+                    <div id="{{ uploadForm }}_forms_flash"></div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <h4>Upload a photo of your passport.</h4>
+
+                    {% partial '@file-upload' %}
+              
+
+                </div>
+
+                {# <div class="form-group">
+                    {% partial '@recaptcha' %}
+                </div> #}
+
+                <div class="booking-form__btn">
+                    <button id="simpleContactSubmitButton" type="submit" class="btn">Send</button>
+                </div>
+
+                {{ form_close() }}
+
+            </div>
+            <div class="booking-form__col">
+                <div class="list-contacts list-contacts--dark">
+                    <ul>
+                        <li>
+                            <span><i class="icon-user2"></i></span>
+                            <div>
+                                <p>{{this.theme.contactPerson}}</p>
+                            </div>
+                        </li>
+                        <li><span><i class="icon-marker"></i></span>
+                            {% for item in this.theme.addressRepeater %}
+                            <div>
+                                {{item.address|raw}}
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span><i class="icon-envelope"></i></span>
+                            {% for item in this.theme.emailRepeater %}
+                            <div>
+                                <a href="tel:{{item.email}}">{{item.email}}</a>
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon-mobile"></i>
+                            </span>
+                            {% for item in this.theme.phoneRepeater %}
+                            <div>
+                                <a href="tel:{{item.phone}}">{{item.phone}}
+                                    <span class="messenger">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            {%endfor%}
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup" id="feedbackModal">
+    <div class="popup__window">
+        <div class="close"></div>
+        <h2>Thank you, your application has been accepted!</h2>
+        <img src="{{'assets/img/popup.jpg'|theme | resize(300, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+            alt="">
+        <h2>We will contact you shortly.</h2>
+    </div>
+</div>";s:5:"mtime";i:1725789216;s:6:"markup";s:5426:"<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>Border pass</li>
+        </ul>
+    </div>
+</div>
+<div class="booking-form">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">BORDER PASS</h2>
+        </div>
+        <div class="booking-form__wrap">
+            <div class="booking-form__col">
+                <p>Here you can reserve the most suitable date for your tour.</p><br>
+                <p>To do this, we need information from the sender.</p>
+
+                {{ form_ajax(uploadForm ~ '::onFormSubmit') }}
+
+
+
+                <div class="input-wrap">
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Имя">
+
+                    </div>
+                    <div class="input input_phone">
+                        <label for="phone">Phone number</label>
+                        <input class="phone-js" name="phone" type="tel" placeholder id="phone">
+                        <div class="output-success">The number is valid!</div>
+                        <div class="output-error">Wrong number. Try again.</div>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="input">
+                        <label for="where">Where is the pass needed?</label>
+                        <input type="text" id="where" name="Куда нужен пропуск">
+                    </div>
+                    
+                    <div class="input input_double">
+                      <div class="input">
+                        <label for="start-date">Date from</label>
+                        <span class="date-wrapper">
+                          <input id="start-date" type="text" autocomplete="off" name="Дата c" placeholder="{{ 'now' | date('d M Y') }}">
+                        </span>
+                      </div>
+                      <div class="input">
+                        <label for="end-date">Date to</label>
+                        <span class="date-wrapper">
+                          <input id="end-date" type="text" autocomplete="off" name="Дата по" disabled>
+                          </span>
+                      </div>
+                    </div>
+
+                    <div id="{{ uploadForm }}_forms_flash"></div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <h4>Upload a photo of your passport.</h4>
+
+                    {% partial '@file-upload' %}
+              
+
+                </div>
+
+                {# <div class="form-group">
+                    {% partial '@recaptcha' %}
+                </div> #}
+
+                <div class="booking-form__btn">
+                    <button id="simpleContactSubmitButton" type="submit" class="btn">Send</button>
+                </div>
+
+                {{ form_close() }}
+
+            </div>
+            <div class="booking-form__col">
+                <div class="list-contacts list-contacts--dark">
+                    <ul>
+                        <li>
+                            <span><i class="icon-user2"></i></span>
+                            <div>
+                                <p>{{this.theme.contactPerson}}</p>
+                            </div>
+                        </li>
+                        <li><span><i class="icon-marker"></i></span>
+                            {% for item in this.theme.addressRepeater %}
+                            <div>
+                                {{item.address|raw}}
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span><i class="icon-envelope"></i></span>
+                            {% for item in this.theme.emailRepeater %}
+                            <div>
+                                <a href="tel:{{item.email}}">{{item.email}}</a>
+                            </div>
+                            {%endfor%}
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon-mobile"></i>
+                            </span>
+                            {% for item in this.theme.phoneRepeater %}
+                            <div>
+                                <a href="tel:{{item.phone}}">{{item.phone}}
+                                    <span class="messenger">
+                                        <i class="{{item.awesome_icon}}"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            {%endfor%}
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup" id="feedbackModal">
+    <div class="popup__window">
+        <div class="close"></div>
+        <h2>Thank you, your application has been accepted!</h2>
+        <img src="{{'assets/img/popup.jpg'|theme | resize(300, auto, { mode: 'crop', quality: '80', extension: 'webp'}) }}"
+            alt="">
+        <h2>We will contact you shortly.</h2>
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:10:"/form-pass";s:6:"layout";s:7:"default";s:5:"title";s:37:"Пограничный пропуск";s:10:"meta_title";s:5:"asdas";s:16:"meta_description";s:8:"dadasdsa";s:7:"viewBag";a:2:{s:9:"localeUrl";a:1:{s:2:"en";s:10:"/form-pass";}s:11:"localeTitle";a:1:{s:2:"en";s:11:"Border pass";}}s:10:"uploadForm";a:23:{s:5:"group";s:37:"Пограничный пропуск";s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:16:"messages_success";s:42:"Your form has been successfully submitted!";s:15:"messages_errors";s:37:"There are errors in your application.";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:41:"CBT Пограничный пропуск";s:15:"mail_recipients";a:1:{s:23:"mongu.karakol@gmail.com";s:3:"CBT";}s:15:"mail_resp_field";s:23:"mongu.karakol@gmail.com";s:14:"mail_resp_from";s:23:"mongu.karakol@gmail.com";s:10:"reset_form";s:1:"1";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";s:15:"uploader_enable";s:1:"1";s:14:"uploader_multi";s:1:"1";s:15:"placeholderText";s:30:"Click or drag files to upload.";s:10:"removeText";s:13:"Are you sure?";s:7:"maxSize";s:1:"5";s:9:"fileTypes";a:42:{i:0;s:3:"jpg";i:1;s:4:"jpeg";i:2;s:3:"bmp";i:3;s:3:"png";i:4;s:4:"webp";i:5;s:3:"gif";i:6;s:3:"svg";i:7;s:2:"js";i:8;s:3:"map";i:9;s:3:"ico";i:10;s:3:"css";i:11;s:4:"less";i:12;s:4:"scss";i:13;s:3:"ics";i:14;s:3:"odt";i:15;s:3:"doc";i:16;s:4:"docx";i:17;s:3:"ppt";i:18;s:4:"pptx";i:19;s:3:"pdf";i:20;s:3:"swf";i:21;s:3:"txt";i:22;s:3:"ods";i:23;s:3:"xls";i:24;s:4:"xlsx";i:25;s:3:"eot";i:26;s:4:"woff";i:27;s:5:"woff2";i:28;s:3:"ttf";i:29;s:3:"flv";i:30;s:3:"wmv";i:31;s:3:"mp3";i:32;s:3:"ogg";i:33;s:3:"wav";i:34;s:3:"avi";i:35;s:3:"mov";i:36;s:3:"mp4";i:37;s:4:"mpeg";i:38;s:4:"webm";i:39;s:3:"mkv";i:40;s:3:"rar";i:41;s:3:"zip";}}s:17:"siteSearchInclude";a:0:{}}}

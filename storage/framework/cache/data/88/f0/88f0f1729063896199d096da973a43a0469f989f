@@ -1,0 +1,86 @@
+1725876918a:1:{s:15:"tours/index.htm";a:11:{s:8:"fileName";s:15:"tours/index.htm";s:7:"content";s:1703:"url = "/tours"
+layout = "default"
+title = "Tours"
+
+[ToursComponent]
+
+[siteSearchInclude]
+
+[viewBag]
+localeTitle[en] = "Tours"
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>All tours</li>
+        </ul>
+    </div>
+</div>
+<div class="kind" style="padding: 30px 0;">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper-container kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                <div class="swiper-slide"><a class="kind__item shine-ef" href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                alt="">
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                                <img src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                    alt=""></div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1725789216;s:6:"markup";s:1574:"<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>All tours</li>
+        </ul>
+    </div>
+</div>
+<div class="kind" style="padding: 30px 0;">
+    <div class="container">
+        <div class="title-wrap title-wrap">
+            <h2 class="title">All tours</h2>
+        </div>
+        <div class="nav">
+            <div class="swiper-button-prev nav-btn"> </div>
+            <div class="swiper-button-next nav-btn"> </div>
+        </div>
+        <div class="swiper-container kind-slider">
+            <div class="swiper-wrapper">
+                {% for item in categories %}
+                <div class="swiper-slide"><a class="kind__item shine-ef" href="/tours/c/{{item.slug}}">
+                        <div class="kind__img">
+                            <img src="{{item.img.path | resize(300, 450, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                alt="">
+                        </div>
+                        <div class="kind__item-desc">
+                            <div class="kind__icon">
+                                <img src="{{item.icon.path | resize(300, false, { mode: 'crop', quality: '80', extension: 'webp' })}}"
+                                    alt=""></div>
+                            <div class="kind__name">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:6:"/tours";s:6:"layout";s:7:"default";s:5:"title";s:5:"Tours";s:14:"ToursComponent";a:0:{}s:17:"siteSearchInclude";a:0:{}s:7:"viewBag";a:1:{s:11:"localeTitle";a:1:{s:2:"en";s:5:"Tours";}}}}

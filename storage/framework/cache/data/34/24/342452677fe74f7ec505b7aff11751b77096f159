@@ -1,0 +1,64 @@
+1725793029a:1:{s:17:"search-result.htm";a:10:{s:8:"fileName";s:17:"search-result.htm";s:7:"content";s:898:"url = "/search-result"
+layout = "default"
+title = "Searching results"
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+
+
+[viewBag]
+localeUrl[en] = "/search-result"
+localeTitle[en] = "Search Results"
+==
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>{{this.page.title}} </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="title-wrap">
+        <h2 class="title">{{this.page.title}}</h2>
+    </div>
+    {% set results = searchResults.results %}
+
+    {% for result in results %}
+    {# Display all results #}
+    {% partial searchResults ~ '::searchresult.htm' result = result %}
+    {% else %}
+    {# No results found #}
+    {% partial searchResults ~ '::no-results.htm' %}
+    {% endfor %}
+
+    {% partial searchResults ~ '::pagination.htm' results = results %}
+
+
+</div>";s:5:"mtime";i:1715787962;s:6:"markup";s:686:"<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{ 'home'|page }}">Home</a></li>
+            <li>{{this.page.title}} </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="title-wrap">
+        <h2 class="title">{{this.page.title}}</h2>
+    </div>
+    {% set results = searchResults.results %}
+
+    {% for result in results %}
+    {# Display all results #}
+    {% partial searchResults ~ '::searchresult.htm' result = result %}
+    {% else %}
+    {# No results found #}
+    {% partial searchResults ~ '::no-results.htm' %}
+    {% endfor %}
+
+    {% partial searchResults ~ '::pagination.htm' results = results %}
+
+
+</div>";s:4:"code";N;s:3:"url";s:14:"/search-result";s:6:"layout";s:7:"default";s:5:"title";s:17:"Searching results";s:13:"searchResults";a:2:{s:14:"resultsPerPage";s:2:"10";s:17:"showProviderBadge";s:1:"1";}s:7:"viewBag";a:2:{s:9:"localeUrl";a:1:{s:2:"en";s:14:"/search-result";}s:11:"localeTitle";a:1:{s:2:"en";s:14:"Search Results";}}}}

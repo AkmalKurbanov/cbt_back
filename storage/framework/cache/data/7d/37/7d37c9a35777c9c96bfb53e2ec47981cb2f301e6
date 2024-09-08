@@ -1,0 +1,92 @@
+1725876918a:1:{s:9:"about.htm";a:7:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:5481:"[viewBag]
+title = "About Us"
+url = "/about"
+layout = "static"
+is_hidden = 0
+navigation_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+og_card = "summary_large_image"
+enabled_in_sitemap = 1
+use_updated_at = 1
+changefreq = "always"
+priority = 0.1
+textImgSection[0][title] = "What is Community Based Tourism?"
+textImgSection[0][text] = "<p>In 2000 Community Based Tourism (CBT) projects were initiated in the Naryn and Jalalabat regions. The project unites various tourism service providers and functions with the support of a Swiss Association for International Cooperation. &nbsp;The main goals of our project are as follows: To generate income to improve the standard of living of CBT members; o preserve the environment, customs, and traditions of the Kyrgyz people; and to create a professional organization among tourism service providers to promote tourism on a regional and national level.</p>
+
+<p>&nbsp;<strong>By utilizing our services you are helping us</strong> <strong>attain our goals.</strong></p>
+
+<p>
+	<br>
+</p>
+
+<p><em>“Community based”</em> means supporting products, services, knowledge and practices found in local communities and offered by local stakeholders. &nbsp;The following definition is used by the World-wide Fund for Nature (WWF):</p>
+
+<p>“<em>Community Based Tourism is a form of tourism where the local community has a substantial control over and involvement in its development and management; and a major proportion of the benefits remain within the community</em>”.</p>
+
+<p><u>Community based <em>tourism</em> (CBT)</u> is the practice of providing natural, value-packed travel services that utilize local accommodation, food, music, art, crafts and traditions. &nbsp;CBT is an excellent value and travel experience that supports rational and sustainable development. CBT gives travelers authentic visits inside homes, villages and heritages while delivering proceeds directly to the families that visitors stay with and buy from. &nbsp;</p>
+
+<p>Tourism is one of the most rapidly growing of all industries globally. &nbsp;But despite the industry’s enormity and pattern growth, everyday tourism destination citizens have commonly found themselves left out of the decision-making and investment process. &nbsp;As a result, in all too many places among Europe, Asia, Africa and the Americas, unsustainable tourism has degraded communities, increased crime, damaged natural resources, ruined artifacts and destroyed sites of heritage. &nbsp;CBT shifts the paradigm from focusing on aggregate “growth” to include participatory stakeholder decision-making, investment opportunity for traditionally local inhabitants and sustainable environmental practices. Thus, CBT is used to describe a variety of activities that encourage and support a wide range of objectives in economic and social development and conservation. CBT principles include:</p>
+
+<p><strong>CBT relies on participation of local stakeholders</strong></p>
+
+<p><strong>CBT has to contribute to the local economic development through increasing tourism revenues</strong></p>
+
+<p><strong>CBT has to develop socially and economically sustainable tourism</strong></p>
+
+<p>CBT is certainly “for-profit,” but its essence is promoting local products and local ownership. CBT requires that the majority of revenues (usually 80-90%) are given directly to the families or proprietors visitors buy from, and the remaining amount generally supports a shared community office and national association. &nbsp;Thus, CBT businesses may receive coordination and training from a central facilitator or foreign consultant, but are never owned by distant investors.&nbsp;</p>
+
+<p>CBT faces two main challenges: promotion and convincing new visitors to try it. &nbsp; Since many community based tourism businesses are in isolated villages, most CBT entrepreneurs don’t have the ability to conduct market research or strategic planning, nor the financial resources to implement them if they did. &nbsp;The second challenge is convincing visitors to try it. Travelers know what comes with a traditional hotel and vacationers want to enjoy their time and relax. &nbsp; But foreign travelers, especially westerners, can be leery of sharing their space with “strangers,” so although most first time patrons love the experience, convincing travelers to try it remains a challenge. &nbsp;If you enjoy CBT, help the industry by telling others about your experience.</p>
+
+<p>
+	<br>
+	<!--[if !supportLineBreakNewLine]-->
+	<br>
+</p>"
+textImgSection[0][image] = ""
+textImgSection[1][title] = "Community Based Tourism Karakol"
+textImgSection[1][text] = "<p><strong>Karakol Community Based Tourism</strong> is the most experienced tour operator in the Issyk Kul region, founded in 2002 with the support of the Swiss government, the project is the most sustainable and the driving force behind the promotion of tourism in the regions. Because of &nbsp; CBT Karakol, many tourist objects and entities have gained great experience in the tourism sector.&nbsp;</p>
+
+<p>Today we offer many quality services in the tourism sector.&nbsp;</p>
+
+<p>Trekking, Hiking, Biking, Accommodation in Yurts and Hotels, Horseback Tours, Cultural Tours, Kayaking and National Cuisine.&nbsp;</p>"
+textImgSection[1][image] = ""
+textImgSection[2][title] = ""
+textImgSection[2][text] = ""
+textImgSection[2][image] = ""
+==
+<figure data-inspector-id="inspectorid-969643201628" data-snippet="tex-img">&nbsp;</figure>";s:5:"mtime";i:1725789216;s:6:"markup";s:91:"<figure data-inspector-id="inspectorid-969643201628" data-snippet="tex-img">&nbsp;</figure>";s:4:"code";N;s:7:"viewBag";a:13:{s:5:"title";s:8:"About Us";s:3:"url";s:6:"/about";s:6:"layout";s:6:"static";s:9:"is_hidden";s:1:"0";s:17:"navigation_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"og_card";s:19:"summary_large_image";s:18:"enabled_in_sitemap";s:1:"1";s:14:"use_updated_at";s:1:"1";s:10:"changefreq";s:6:"always";s:8:"priority";s:3:"0.1";s:14:"textImgSection";a:3:{i:0;a:3:{s:5:"title";s:32:"What is Community Based Tourism?";s:4:"text";s:4214:"<p>In 2000 Community Based Tourism (CBT) projects were initiated in the Naryn and Jalalabat regions. The project unites various tourism service providers and functions with the support of a Swiss Association for International Cooperation. &nbsp;The main goals of our project are as follows: To generate income to improve the standard of living of CBT members; o preserve the environment, customs, and traditions of the Kyrgyz people; and to create a professional organization among tourism service providers to promote tourism on a regional and national level.</p>
+
+<p>&nbsp;<strong>By utilizing our services you are helping us</strong> <strong>attain our goals.</strong></p>
+
+<p>
+	<br>
+</p>
+
+<p><em>“Community based”</em> means supporting products, services, knowledge and practices found in local communities and offered by local stakeholders. &nbsp;The following definition is used by the World-wide Fund for Nature (WWF):</p>
+
+<p>“<em>Community Based Tourism is a form of tourism where the local community has a substantial control over and involvement in its development and management; and a major proportion of the benefits remain within the community</em>”.</p>
+
+<p><u>Community based <em>tourism</em> (CBT)</u> is the practice of providing natural, value-packed travel services that utilize local accommodation, food, music, art, crafts and traditions. &nbsp;CBT is an excellent value and travel experience that supports rational and sustainable development. CBT gives travelers authentic visits inside homes, villages and heritages while delivering proceeds directly to the families that visitors stay with and buy from. &nbsp;</p>
+
+<p>Tourism is one of the most rapidly growing of all industries globally. &nbsp;But despite the industry’s enormity and pattern growth, everyday tourism destination citizens have commonly found themselves left out of the decision-making and investment process. &nbsp;As a result, in all too many places among Europe, Asia, Africa and the Americas, unsustainable tourism has degraded communities, increased crime, damaged natural resources, ruined artifacts and destroyed sites of heritage. &nbsp;CBT shifts the paradigm from focusing on aggregate “growth” to include participatory stakeholder decision-making, investment opportunity for traditionally local inhabitants and sustainable environmental practices. Thus, CBT is used to describe a variety of activities that encourage and support a wide range of objectives in economic and social development and conservation. CBT principles include:</p>
+
+<p><strong>CBT relies on participation of local stakeholders</strong></p>
+
+<p><strong>CBT has to contribute to the local economic development through increasing tourism revenues</strong></p>
+
+<p><strong>CBT has to develop socially and economically sustainable tourism</strong></p>
+
+<p>CBT is certainly “for-profit,” but its essence is promoting local products and local ownership. CBT requires that the majority of revenues (usually 80-90%) are given directly to the families or proprietors visitors buy from, and the remaining amount generally supports a shared community office and national association. &nbsp;Thus, CBT businesses may receive coordination and training from a central facilitator or foreign consultant, but are never owned by distant investors.&nbsp;</p>
+
+<p>CBT faces two main challenges: promotion and convincing new visitors to try it. &nbsp; Since many community based tourism businesses are in isolated villages, most CBT entrepreneurs don’t have the ability to conduct market research or strategic planning, nor the financial resources to implement them if they did. &nbsp;The second challenge is convincing visitors to try it. Travelers know what comes with a traditional hotel and vacationers want to enjoy their time and relax. &nbsp; But foreign travelers, especially westerners, can be leery of sharing their space with “strangers,” so although most first time patrons love the experience, convincing travelers to try it remains a challenge. &nbsp;If you enjoy CBT, help the industry by telling others about your experience.</p>
+
+<p>
+	<br>
+	<!--[if !supportLineBreakNewLine]-->
+	<br>
+</p>";s:5:"image";s:0:"";}i:1;a:3:{s:5:"title";s:31:"Community Based Tourism Karakol";s:4:"text";s:622:"<p><strong>Karakol Community Based Tourism</strong> is the most experienced tour operator in the Issyk Kul region, founded in 2002 with the support of the Swiss government, the project is the most sustainable and the driving force behind the promotion of tourism in the regions. Because of &nbsp; CBT Karakol, many tourist objects and entities have gained great experience in the tourism sector.&nbsp;</p>
+
+<p>Today we offer many quality services in the tourism sector.&nbsp;</p>
+
+<p>Trekking, Hiking, Biking, Accommodation in Yurts and Hotels, Horseback Tours, Cultural Tours, Kayaking and National Cuisine.&nbsp;</p>";s:5:"image";s:0:"";}i:2;a:3:{s:5:"title";s:0:"";s:4:"text";s:0:"";s:5:"image";s:0:"";}}}s:12:"parsedMarkup";s:91:"<figure data-inspector-id="inspectorid-969643201628" data-snippet="tex-img">&nbsp;</figure>";}}

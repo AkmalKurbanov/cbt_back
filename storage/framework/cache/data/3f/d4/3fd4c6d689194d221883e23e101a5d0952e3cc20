@@ -1,0 +1,9 @@
+1725876918a:1:{s:18:"tours/category.htm";a:10:{s:8:"fileName";s:18:"tours/category.htm";s:7:"content";s:144:"url = "/tours/c/:cat_slug"
+layout = "default"
+title = "Tours"
+
+[ToursComponent]
+
+[siteSearchInclude]
+==
+{% component 'ToursComponent' %}";s:5:"mtime";i:1725789216;s:6:"markup";s:32:"{% component 'ToursComponent' %}";s:4:"code";N;s:3:"url";s:18:"/tours/c/:cat_slug";s:6:"layout";s:7:"default";s:5:"title";s:5:"Tours";s:14:"ToursComponent";a:0:{}s:17:"siteSearchInclude";a:0:{}}}
