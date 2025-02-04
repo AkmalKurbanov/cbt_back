@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/form-pass.htm */
+/* C:\work\backend\domains\cbt-karakol\themes/cbt-karakol/pages/form-pass.htm */
 class __TwigTemplate_b1a56134c5876cc1a9670c0a4e740ecf extends Template
 {
     private $source;
@@ -245,7 +245,7 @@ class __TwigTemplate_b1a56134c5876cc1a9670c0a4e740ecf extends Template
 
     public function getTemplateName()
     {
-        return "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/form-pass.htm";
+        return "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/pages/form-pass.htm";
     }
 
     public function isTraitable()
@@ -395,6 +395,6 @@ class __TwigTemplate_b1a56134c5876cc1a9670c0a4e740ecf extends Template
             alt=\"\">
         <h2>We will contact you shortly.</h2>
     </div>
-</div>", "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/form-pass.htm", "");
+</div>", "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/pages/form-pass.htm", "");
     }
 }

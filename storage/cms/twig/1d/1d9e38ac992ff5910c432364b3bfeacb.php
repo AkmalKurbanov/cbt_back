@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/tours/index.htm */
+/* C:\work\backend\domains\cbt-karakol\themes/cbt-karakol/pages/tours/index.htm */
 class __TwigTemplate_8f5ba68490c1000d3e8c8d1a838c2ee6 extends Template
 {
     private $source;
@@ -100,7 +100,7 @@ class __TwigTemplate_8f5ba68490c1000d3e8c8d1a838c2ee6 extends Template
 
     public function getTemplateName()
     {
-        return "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/tours/index.htm";
+        return "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/pages/tours/index.htm";
     }
 
     public function isTraitable()
@@ -152,6 +152,6 @@ class __TwigTemplate_8f5ba68490c1000d3e8c8d1a838c2ee6 extends Template
             </div>
         </div>
     </div>
-</div>", "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/pages/tours/index.htm", "");
+</div>", "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/pages/tours/index.htm", "");
     }
 }

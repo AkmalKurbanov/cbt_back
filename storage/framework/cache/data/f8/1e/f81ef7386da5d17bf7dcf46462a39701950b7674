@@ -1,4 +1,4 @@
-1725876921a:1:{s:10:"events.htm";a:6:{s:8:"fileName";s:10:"events.htm";s:7:"content";s:2004:"[blogPosts]
+1734695986a:1:{s:10:"events.htm";a:6:{s:8:"fileName";s:10:"events.htm";s:7:"content";s:2004:"[blogPosts]
 pageNumber = "{{ :page }}"
 postsPerPage = 10
 noPostsMessage = "Записей не найдено"

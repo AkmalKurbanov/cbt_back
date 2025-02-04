@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/partials/site/header.htm */
+/* C:\work\backend\domains\cbt-karakol\themes/cbt-karakol/partials/site/header.htm */
 class __TwigTemplate_320e507c71efad84fd964fec83cb227f extends Template
 {
     private $source;
@@ -163,7 +163,7 @@ class __TwigTemplate_320e507c71efad84fd964fec83cb227f extends Template
 
     public function getTemplateName()
     {
-        return "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/partials/site/header.htm";
+        return "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/partials/site/header.htm";
     }
 
     public function isTraitable()
@@ -248,6 +248,6 @@ class __TwigTemplate_320e507c71efad84fd964fec83cb227f extends Template
 
 {% partial 'search-form' %}
 
-{% placeholder headerAfter %}", "/home/m/mongu/cbtkarakol.com/public_html/themes/cbt-karakol/partials/site/header.htm", "");
+{% placeholder headerAfter %}", "C:\\work\\backend\\domains\\cbt-karakol\\themes/cbt-karakol/partials/site/header.htm", "");
     }
 }
